@@ -1,0 +1,23 @@
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React from "react";
+
+interface TitleProps {
+  title: string;
+  color: string;
+}
+export default function Title({ title, color }: TitleProps) {
+  return (
+    <>
+      <div className={cn("w-2 h-7", color)} />
+      <h2 className="text-4xl text-white font-bold">{title}</h2>
+      <Image
+        src="/star-3.svg"
+        alt="Sparkles Icon"
+        width={60}
+        height={60}
+        className="absolute -right-16 -top-10"
+      />
+    </>
+  );
+}

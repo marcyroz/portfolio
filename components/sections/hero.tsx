@@ -5,11 +5,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex px-40 items-center justify-between">
-      <div className="absolute bottom-56 left-20">
-        <Image src="/star-2.svg" alt="Hero Image" width={80} height={80} />
-      </div>
-      <div className="flex flex-col gap-2">
+    <section className="h-screen flex px-40 items-center justify-between">
+      <div className="flex flex-col gap-2 relative">
         <h1 className="text-white text-7xl font-bold">Hi! I am Marcelly.</h1>
         <h2 className="text-primary font-bold text-3xl">
           Frontend Developer and Designer
@@ -26,6 +23,9 @@ export default function Hero() {
             My CV
             <Download />
           </Button>
+        </div>
+        <div className="absolute -bottom-20 -left-20">
+          <Image src="/star-2.svg" alt="Hero Image" width={80} height={80} />
         </div>
       </div>
       <Image src="/hero.svg" alt="Hero Image" width={550} height={550} />
