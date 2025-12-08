@@ -8,7 +8,7 @@ interface TitleProps {
 }
 export default function Title({ title, color }: TitleProps) {
   return (
-    <>
+    <div className="flex gap-4 relative items-center w-fit">
       <div className={cn("w-2 h-7", color)} />
       <h2 className="text-4xl text-white font-bold">{title}</h2>
       <Image
@@ -18,6 +18,6 @@ export default function Title({ title, color }: TitleProps) {
         height={60}
         className="absolute -right-16 -top-10"
       />
-    </>
+    </div>
   );
 }

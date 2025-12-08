@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <nav className="h-28 bg-popover w-full gap-96 flex items-center justify-center sticky">
+    <nav className="h-28 bg-popover w-full px-40 flex items-center justify-between sticky">
       <div className="items-center flex gap-4">
         <Image
           src="/star.svg"

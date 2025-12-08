@@ -23,9 +23,7 @@ export default function About() {
         />
       </div>
       <div className="flex flex-col gap-16 w-96">
-        <div className="flex gap-4 relative items-center w-fit">
-          <Title title="About Me" color="bg-tertiary" />
-        </div>
+        <Title title="About Me" color="bg-tertiary" />
         <p className="font-bold text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
