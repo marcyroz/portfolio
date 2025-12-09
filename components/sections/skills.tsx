@@ -154,7 +154,7 @@ const designDetails = [
 
 export default function Skills() {
   return (
-    <section className="bg-popover-foreground p-28">
+    <section className="bg-card-foreground p-28">
       <div className="flex flex-col items-center gap-20">
         <Title title="Technologies and Skills" color="bg-secondary" />
         <CarouselSection
