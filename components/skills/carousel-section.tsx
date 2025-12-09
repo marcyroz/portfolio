@@ -1,4 +1,3 @@
-import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import Image from "next/image";
 import { Card } from "../ui/card";

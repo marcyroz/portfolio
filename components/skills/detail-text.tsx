@@ -1,5 +1,3 @@
-import React from "react";
-
 interface DetailTextProps {
   text: string;
   icon: React.ReactNode;

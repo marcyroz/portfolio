@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { Separator } from "../ui/separator";
 import Title from "../title";
 
