@@ -8,18 +8,20 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <section className="p-28 flex flex-col gap-8 ">
+    <section className="py-28 flex flex-col gap-8 max-w-7xl justify-center mx-auto">
       <Title color="bg-secondary" title="Contact me" />
       <h3 className="text-secondary font-semibold text-2xl">
         By filling this form...
       </h3>
-      <div className="gap-4 flex flex-col">
-        <Label htmlFor="name">Name</Label>
-        <Input placeholder="Your first name..." />
-      </div>
-      <div className="gap-4 flex flex-col">
-        <Label htmlFor="lastName">Last Name</Label>
-        <Input placeholder="Your last name..." />
+      <div className="flex gap-4 w-full">
+        <div className="gap-4 flex flex-col w-full">
+          <Label htmlFor="name">Name</Label>
+          <Input placeholder="Your first name..." />
+        </div>
+        <div className="gap-4 flex flex-col w-full">
+          <Label htmlFor="lastName">Last Name</Label>
+          <Input placeholder="Your last name..." />
+        </div>
       </div>
       <div className="gap-4 flex flex-col">
         <Label htmlFor="email">E-mail</Label>

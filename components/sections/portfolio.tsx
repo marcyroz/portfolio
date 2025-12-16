@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ProjectInfo from "../portfolio/project-info";
-import GithubIcon from "../portfolio/github-icon";
+import GithubIcon from "../icons/github-icon";
 
 const projectData = [
   {

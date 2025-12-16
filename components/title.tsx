@@ -15,7 +15,7 @@ export default function Title({ title, color }: TitleProps) {
         alt="Sparkles Icon"
         width={60}
         height={60}
-        className="absolute -right-16 -top-10"
+        className="absolute -right-16 -top-10 rotate -scale-x-100"
       />
     </div>
   );
