@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProjectInfo from "../portfolio/project-info";
 import GithubIcon from "../icons/github-icon";
+import BehanceIcon from "../icons/behance-icon";
 
 const projectData = [
   {
@@ -12,6 +13,7 @@ const projectData = [
     links: [
       {
         title: "Behance",
+        icon: <BehanceIcon width={20} height={20} />,
         url: "https://www.behance.net/gallery/162202123/DESU-App-Illustrations-and-Character-Design",
       },
     ],
@@ -46,27 +48,27 @@ const projectData = [
         url: "https://www.salaorosadesaronpg.com.br/",
       },
       {
-        icon: <GithubIcon width={20} height={21} />,
         title: "Github",
+        icon: <GithubIcon width={20} height={20} />,
         url: "https://github.com/marcyroz/salao-rosa-de-saron",
       },
     ],
     technologies: [
       {
         name: "TypeScript",
-        icon: "skills/development/typescript.svg",
+        icon: "skills/development/frontend/typescript.svg",
       },
       {
         name: "Next.js",
-        icon: "skills/development/nextjs.svg",
+        icon: "skills/development/frontend/nextjs.svg",
       },
       {
         name: "Tailwind CSS",
-        icon: "skills/development/tailwindcss.svg",
+        icon: "skills/development/frontend/tailwindcss.svg",
       },
       {
         name: "Git",
-        icon: "skills/development/git.svg",
+        icon: "skills/development/frontend/git.svg",
       },
       {
         name: "Figma",

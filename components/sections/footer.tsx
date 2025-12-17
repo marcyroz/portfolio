@@ -1,6 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
-import { Separator } from "../ui/separator";
+import { cloneElement, useState } from "react";
 import DiscordIcon from "../icons/discord-icon";
 import LinkedinIcon from "../icons/linkedin-icon";
 import GithubIcon from "../icons/github-icon";
@@ -26,6 +27,8 @@ const socials = [
 ];
 
 export default function Footer() {
+  const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
+
   return (
     <footer className="bg-card-foreground flex flex-col p-28 items-center">
       <div className="flex gap-8">
@@ -48,7 +51,7 @@ export default function Footer() {
             sometime.
           </p>
           <p className="font-bold text-lg">
-            I'm pretty active there! To stay updated on what I’m up to, follow
+            I'm pretty active there! To stay updated on what I'm up to, follow
             me on my socials and feel free to drop by here again soon. See you
             later! ;)
           </p>
@@ -56,12 +59,21 @@ export default function Footer() {
         </div>
         <div className="w-2 bg-white/20 self-stretch" />
         <div className="relative flex flex-col">
-          <div className="flex-col gap-4 flex px-10">
+          <div className="flex-col gap-4 flex px-10 mb-10">
             <h4 className="font-semibold text-2xl text-white">Socials</h4>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-4">
               {socials.map((social) => (
-                <div key={social.name} className="flex items-center gap-4 mb-4">
-                  {React.cloneElement(social.icon, { width: 50, height: 50 })}
+                <div
+                  key={social.name}
+                  className="flex items-center justify-center cursor-pointer transition-transform hover:scale-105"
+                  onMouseEnter={() => setHoveredIcon(social.name)}
+                  onMouseLeave={() => setHoveredIcon(null)}
+                >
+                  {cloneElement(social.icon, {
+                    width: 50,
+                    height: 50,
+                    color: hoveredIcon === social.name ? "#FFFFFF" : "#838383",
+                  })}
                 </div>
               ))}
             </div>

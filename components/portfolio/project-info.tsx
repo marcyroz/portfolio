@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { ChevronDown } from "lucide-react";
-import React from "react";
+import { useState } from "react";
 
 interface ProjectInfoProps {
   item: {
@@ -14,6 +16,7 @@ interface ProjectInfoProps {
       icon?: string | React.ReactNode;
       title: string;
       url: string;
+      hoverColor?: string;
     }[];
     technologies?: {
       name: string;
@@ -24,6 +27,8 @@ interface ProjectInfoProps {
 }
 
 export default function ProjectInfo({ item }: ProjectInfoProps) {
+  const [hoveredLink, setHoveredLink] = useState<number | null>(null);
+
   return (
     <div className="flex flex-col gap-5">
       <h3 className="text-primary font-semibold text-4xl">{item.title}</h3>
@@ -39,7 +44,12 @@ export default function ProjectInfo({ item }: ProjectInfoProps) {
       <div className="flex items-center justify-between">
         <div className="flex gap-5">
           {item.links.map((link, index) => (
-            <div key={index} className="flex gap-2 items-center">
+            <div
+              key={index}
+              className="flex gap-2 items-center group hover:scale-105"
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+            >
               <div className="h-5 w-2 bg-primary" />
               {link.icon && typeof link.icon === "string" ? (
                 <Image
@@ -47,14 +57,24 @@ export default function ProjectInfo({ item }: ProjectInfoProps) {
                   alt={`${link.title} Icon`}
                   width={20}
                   height={20}
+                  className="transition-all group-hover:brightness-200"
                 />
-              ) : null}
-              {typeof link.icon !== "string" && link.icon}
+              ) : (
+                <div className="transition-all group-hover:brightness-200">
+                  {link.icon}
+                </div>
+              )}
               <a
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-bold hover:text-white transition-colors"
+                className="text-lg font-bold transition-colors"
+                style={{
+                  color:
+                    hoveredLink === index
+                      ? link.hoverColor || "#FFFFFF"
+                      : "inherit",
+                }}
               >
                 {link.title}
               </a>
@@ -74,11 +94,11 @@ export default function ProjectInfo({ item }: ProjectInfoProps) {
         </div>
       </div>
       <div className="w-full flex">
-        <Button variant="ghost">
-          <Separator />
+        <Button variant="ghost" className="group">
+          <Separator className="group-hover:bg-white transition-colors" />
           Ver mais
-          <ChevronDown />
-          <Separator />
+          <ChevronDown className="size-6" />
+          <Separator className="group-hover:bg-white transition-colors" />
         </Button>
       </div>
     </div>

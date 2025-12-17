@@ -1,4 +1,13 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+const navigationLinks = [
+  { title: "Home", url: "#", color: "bg-primary" },
+  { title: "About", url: "#", color: "bg-secondary" },
+  { title: "Skills", url: "#", color: "bg-tertiary" },
+  { title: "Portfolio", url: "#", color: "bg-primary" },
+  { title: "Contact", url: "#", color: "bg-secondary" },
+];
 
 export default function Header() {
   return (
@@ -17,11 +26,20 @@ export default function Header() {
       </div>
       <div>
         <ul className="flex gap-8 text-white text-xl font-semibold">
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Portfolio</li>
-          <li>Contact</li>
+          {navigationLinks.map((link) => (
+            <li
+              key={link.title}
+              className="relative flex group cursor-pointer hover:scale-105"
+            >
+              {link.title}
+              <div
+                className={cn(
+                  "group-hover:block hidden w-full h-4 absolute -z-10 -bottom-1 -left-2",
+                  link.color
+                )}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
