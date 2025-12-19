@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import ProjectInfo from "../portfolio/project-info";
 import GithubIcon from "../icons/github-icon";
 import BehanceIcon from "../icons/behance-icon";
+import SalaoRosaDeSaron from "../portfolio/projects/salao-rosa-de-saron";
 
 const projectData = [
   {
@@ -75,6 +78,7 @@ const projectData = [
         icon: "skills/design/figma.svg",
       },
     ],
+    content: SalaoRosaDeSaron,
   },
 ];
 
@@ -101,7 +105,11 @@ export default function Portfolio() {
         />
       </div>
       {projectData.map((project) => (
-        <ProjectInfo key={project.id} item={project} />
+        <ProjectInfo
+          key={project.id}
+          item={project}
+          renderContent={project.content}
+        />
       ))}
     </section>
   );

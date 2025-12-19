@@ -32,30 +32,41 @@ export default function Footer() {
   return (
     <footer className="bg-card-foreground flex flex-col p-28 items-center">
       <div className="flex gap-8">
-        <div className="flex flex-col">
-          <div className="flex items-center gap-4 mb-4">
-            <Image
-              src="/star.svg"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="inline-block ml-2"
-            />
-            <h4 className="font-semibold text-2xl text-white">
-              Thanks for visiting!
-            </h4>
+        <div className="flex justify-between w-full">
+          <div className="flex flex-col">
+            <div className="flex items-center gap-4 mb-4">
+              <Image
+                src="/star.svg"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="inline-block ml-2"
+              />
+              <h4 className="font-semibold text-2xl text-white">
+                Thanks for visiting!
+              </h4>
+            </div>
+            <p className="font-bold text-lg max-w-2xl">
+              If you're here, you probably took an interest in my work, so feel
+              free to reach out professionally or just say hi on LinkedIn
+              sometime.
+            </p>
+            <p className="font-bold text-lg max-w-2xl">
+              I'm pretty active there! To stay updated on what I'm up to, follow
+              me on my socials and feel free to drop by here again soon. See you
+              later! ;)
+            </p>
+            <span className="font-bold text-lg">- Marcy</span>
           </div>
-          <p className="font-bold text-lg">
-            If you're here, you probably took an interest in my work — so feel
-            free to reach out professionally or just say hi on LinkedIn
-            sometime.
-          </p>
-          <p className="font-bold text-lg">
-            I'm pretty active there! To stay updated on what I'm up to, follow
-            me on my socials and feel free to drop by here again soon. See you
-            later! ;)
-          </p>
-          <span className="font-bold text-lg">- Marcy</span>
+          <div className="flex">
+            <Image
+              src="/animations/gatinho-3.gif"
+              alt="Cat Animation"
+              width={150}
+              height={150}
+              className="object-contain self-end"
+            />
+          </div>
         </div>
         <div className="w-2 bg-white/20 self-stretch" />
         <div className="relative flex flex-col">

@@ -24,8 +24,15 @@ export default function About() {
             height={100}
             className="absolute bottom-5 right-0"
           />
+          <Image
+            src="/animations/gatinho.gif"
+            alt="Cat Animation"
+            width={150}
+            height={150}
+            className="absolute -top-18 left-10 -rotate-25"
+          />
         </div>
-        <div className="flex flex-col gap-16 w-96">
+        <div className="flex flex-col gap-16 w-120">
           <Title title="About Me" color="bg-tertiary" />
           <p className="font-bold text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -36,7 +43,17 @@ export default function About() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <Separator />
+          <div className="flex items-center gap-5 w-full">
+            <Separator className="flex-1" />
+            <div className="w-[100px] h-[100px] relative shrink-0">
+              <Image
+                src="/animations/computer.gif"
+                alt="Computer Animation"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

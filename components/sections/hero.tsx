@@ -27,7 +27,22 @@ export default function Hero() {
           <Image src="/star-2.svg" alt="Hero Image" width={80} height={80} />
         </div>
       </div>
-      <Image src="/hero.svg" alt="Hero Image" width={550} height={550} />
+      <div className="relative">
+        <Image
+          src="/hero.svg"
+          alt="Hero background image"
+          width={600}
+          height={550}
+          className="-z-10"
+        />
+        <Image
+          src="/animations/eu.gif"
+          alt="Hero Image"
+          width={800}
+          height={800}
+          className="absolute top-28 left-20"
+        />
+      </div>
     </section>
   );
 }

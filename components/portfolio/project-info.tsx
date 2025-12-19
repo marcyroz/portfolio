@@ -5,6 +5,8 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ProjectInfoProps {
   item: {
@@ -23,11 +25,12 @@ interface ProjectInfoProps {
       icon: string;
     }[];
   };
-  children?: React.ReactNode;
+  renderContent?: () => React.ReactNode;
 }
 
-export default function ProjectInfo({ item }: ProjectInfoProps) {
+export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
   const [hoveredLink, setHoveredLink] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="flex flex-col gap-5">
@@ -93,14 +96,38 @@ export default function ProjectInfo({ item }: ProjectInfoProps) {
           ))}
         </div>
       </div>
-      <div className="w-full flex">
-        <Button variant="ghost" className="group">
-          <Separator className="group-hover:bg-white transition-colors" />
-          Ver mais
-          <ChevronDown className="size-6" />
-          <Separator className="group-hover:bg-white transition-colors" />
-        </Button>
-      </div>
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            {renderContent && renderContent()}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {renderContent && (
+        <div className="w-full flex">
+          <Button
+            variant="ghost"
+            className="group text-popover"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <Separator className="group-hover:bg-white transition-colors" />
+            {isExpanded ? "Show Less" : "Show More"}
+            <ChevronDown
+              className={cn(
+                "size-6 transition-transform duration-500",
+                isExpanded && "rotate-180"
+              )}
+            />
+            <Separator className="group-hover:bg-white transition-colors" />
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

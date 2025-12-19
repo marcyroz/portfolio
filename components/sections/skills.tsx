@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import CarouselSection from "../skills/carousel-section";
 import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 const skillsSections = [
   {
@@ -282,12 +283,22 @@ export default function Skills() {
             detailItems={section.detailItems}
           />
         ))}
-        <p className="font-bold text-lg text-end">
-          {
-            "If you know the concepts of design and art, and also know how to develop, you can use technology to trully do anything you wish."
-          }
-        </p>
-        <Separator />
+        <div className="flex gap-10">
+          <div className="flex flex-col max-w-2xl justify-between">
+            <p className="font-bold text-lg text-end">
+              {
+                '"If you know the concepts of design and art, and also know how to develop, you can use technology to trully do anything you wish."'
+              }
+            </p>
+            <Separator />
+          </div>
+          <Image
+            src="/animations/gatinho-2.gif"
+            alt="Cat Animation"
+            width={200}
+            height={200}
+          />
+        </div>
       </div>
     </section>
   );
