@@ -9,7 +9,7 @@ const navigationLinks = [
   { title: "Contact", url: "#", color: "bg-secondary" },
 ];
 
-export default function Header() {
+export default function Navbar() {
   return (
     <nav className="h-28 bg-popover w-full px-40 flex items-center justify-between sticky">
       <div className="items-center flex gap-4">

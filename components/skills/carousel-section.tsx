@@ -1,7 +1,11 @@
+"use client";
+
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import Image from "next/image";
 import { Card } from "../ui/card";
 import DetailText from "./detail-text";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 interface CarouselSectionProps {
   title: string;
@@ -21,12 +25,15 @@ export default function CarouselSection({
   carouselItems,
   detailItems,
 }: CarouselSectionProps) {
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+
   return (
     <div className="flex flex-col gap-10 w-full items-center">
       <div className="flex flex-col gap-8 items-center w-full">
         <h3 className="text-secondary font-semibold text-2xl">{title}</h3>
         <Carousel
           className="w-full"
+          plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,

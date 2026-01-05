@@ -11,18 +11,22 @@ const socials = [
   {
     name: "LinkedIn",
     icon: <LinkedinIcon />,
+    link: "https://www.linkedin.com/in/marcelly-do-nascimento-farias-93aa17268/",
   },
   {
     name: "GitHub",
     icon: <GithubIcon />,
+    link: "https://github.com/marcyroz",
   },
   {
     name: "Behance",
     icon: <BehanceIcon />,
+    link: "https://www.behance.net/marcellnascime7#",
   },
   {
     name: "Discord",
     icon: <DiscordIcon />,
+    link: "https://discord.gg/N9rqD4Ds",
   },
 ];
 
@@ -30,7 +34,7 @@ export default function Footer() {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
 
   return (
-    <footer className="bg-card-foreground flex flex-col p-28 items-center">
+    <footer className="bg-card-foreground flex flex-col p-20 items-center">
       <div className="flex gap-8">
         <div className="flex justify-between w-full">
           <div className="flex flex-col">
@@ -79,10 +83,11 @@ export default function Footer() {
                   className="flex items-center justify-center cursor-pointer transition-transform hover:scale-105"
                   onMouseEnter={() => setHoveredIcon(social.name)}
                   onMouseLeave={() => setHoveredIcon(null)}
+                  onClick={() => window.open(social.link, "_blank")}
                 >
                   {cloneElement(social.icon, {
-                    width: 50,
-                    height: 50,
+                    width: 80,
+                    height: 80,
                     color: hoveredIcon === social.name ? "#FFFFFF" : "#838383",
                   })}
                 </div>

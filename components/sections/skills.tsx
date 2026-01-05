@@ -80,36 +80,41 @@ const skillsSections = [
       },
       {
         id: 13,
+        title: "Storybook",
+        image: "/skills/development/frontend/storybook.svg",
+      },
+      {
+        id: 14,
         title: "Git",
         image: "/skills/development/frontend/git.svg",
       },
       {
-        id: 14,
+        id: 15,
         title: "Vite",
         image: "/skills/development/frontend/vite.svg",
       },
       {
-        id: 15,
+        id: 16,
         title: "Pnpm",
         image: "/skills/development/frontend/pnpm.svg",
       },
       {
-        id: 16,
+        id: 17,
         title: "Yarn",
         image: "/skills/development/frontend/yarn.svg",
       },
       {
-        id: 17,
+        id: 18,
         title: "Zustand",
         image: "/skills/development/frontend/zustand.svg",
       },
       {
-        id: 18,
+        id: 19,
         title: "Jest",
         image: "/skills/development/frontend/jest.svg",
       },
       {
-        id: 19,
+        id: 20,
         title: "Vitest",
         image: "/skills/development/frontend/vitest.svg",
       },
@@ -283,8 +288,8 @@ export default function Skills() {
             detailItems={section.detailItems}
           />
         ))}
-        <div className="flex gap-10">
-          <div className="flex flex-col max-w-2xl justify-between">
+        <div className="flex gap-10 items-center">
+          <div className="flex flex-col max-w-2xl gap-8">
             <p className="font-bold text-lg text-end">
               {
                 '"If you know the concepts of design and art, and also know how to develop, you can use technology to trully do anything you wish."'

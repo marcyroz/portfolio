@@ -31,6 +31,7 @@ interface ProjectInfoProps {
 export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
   const [hoveredLink, setHoveredLink] = useState<number | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   return (
     <div className="flex flex-col gap-5">
@@ -110,13 +111,20 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
         )}
       </AnimatePresence>
       {renderContent && (
-        <div className="w-full flex">
+        <div className="w-full flex justify-center items-center gap-4">
+          <Separator
+            className={cn(
+              "transition-colors flex-1 h-0.5",
+              isButtonHovered ? "bg-white" : "bg-popover"
+            )}
+          />
           <Button
             variant="ghost"
-            className="group text-popover"
+            className="group text-popover shrink-0"
             onClick={() => setIsExpanded(!isExpanded)}
+            onMouseEnter={() => setIsButtonHovered(true)}
+            onMouseLeave={() => setIsButtonHovered(false)}
           >
-            <Separator className="group-hover:bg-white transition-colors" />
             {isExpanded ? "Show Less" : "Show More"}
             <ChevronDown
               className={cn(
@@ -124,8 +132,13 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
                 isExpanded && "rotate-180"
               )}
             />
-            <Separator className="group-hover:bg-white transition-colors" />
           </Button>
+          <Separator
+            className={cn(
+              "transition-colors flex-1 h-0.5",
+              isButtonHovered ? "bg-white" : "bg-popover"
+            )}
+          />
         </div>
       )}
     </div>

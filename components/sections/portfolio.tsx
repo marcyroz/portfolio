@@ -5,13 +5,14 @@ import ProjectInfo from "../portfolio/project-info";
 import GithubIcon from "../icons/github-icon";
 import BehanceIcon from "../icons/behance-icon";
 import SalaoRosaDeSaron from "../portfolio/projects/salao-rosa-de-saron";
+import Desu from "../portfolio/projects/desu";
 
 const projectData = [
   {
     id: 1,
     title: "DESU",
     description:
-      "A japanese learning app for those who love the japanese culture, especially anime! This is a Lisbom project, and I’m currently responsable for the character design, as well for the animation and overall illustrations that will come on the app. Stay tunned!",
+      "An AI-powered Japanese learning app designed for anime and Japanese culture enthusiasts. This innovative language course generates personalized lessons and progress sections through artificial intelligence, creating a highly tailored learning experience for each user. As a Junior Developer at Lisbom, I contributed to fullstack development and created the character design, animations, and overall illustrations for the app. Stay tuned!",
     bannerImage: "portfolio/desu/banner.svg",
     links: [
       {
@@ -19,8 +20,76 @@ const projectData = [
         icon: <BehanceIcon width={20} height={20} />,
         url: "https://www.behance.net/gallery/162202123/DESU-App-Illustrations-and-Character-Design",
       },
+      {
+        title: "Rive Animations",
+        url: "https://rive.app/@marcyrozdoc/",
+      },
     ],
     technologies: [
+      {
+        name: "React Native",
+        icon: "skills/development/frontend/reactnative.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "skills/development/frontend/typescript.svg",
+      },
+      {
+        name: "Expo",
+        icon: "skills/development/frontend/expo.svg",
+      },
+      {
+        name: "Zustand",
+        icon: "skills/development/frontend/zustand.svg",
+      },
+      {
+        name: "tailwindcss",
+        icon: "skills/development/frontend/tailwindcss.svg",
+      },
+      {
+        name: "Storybook",
+        icon: "skills/development/frontend/storybook.svg",
+      },
+      {
+        name: "Jest",
+        icon: "skills/development/frontend/jest.svg",
+      },
+      {
+        name: "Vitest",
+        icon: "skills/development/frontend/vitest.svg",
+      },
+      {
+        name: "Next.js",
+        icon: "skills/development/frontend/nextjs.svg",
+      },
+      {
+        name: "trpc",
+        icon: "skills/development/backend/trpc.svg",
+      },
+      {
+        name: "nestjs",
+        icon: "skills/development/backend/nestjs.svg",
+      },
+      {
+        name: "Docker",
+        icon: "skills/development/backend/docker.svg",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "skills/development/backend/postgres.svg",
+      },
+      {
+        name: "MongoDB",
+        icon: "skills/development/backend/mongodb.svg",
+      },
+      {
+        name: "Neo4j",
+        icon: "skills/development/backend/neo4j.svg",
+      },
+      {
+        name: "Firebase",
+        icon: "skills/development/backend/firebase.svg",
+      },
       {
         name: "Adobe Illustrator",
         icon: "skills/design/illustrator.svg",
@@ -38,12 +107,13 @@ const projectData = [
         icon: "skills/design/figma.svg",
       },
     ],
+    content: Desu,
   },
   {
     id: 2,
     title: "Salão Rosa de Saron",
     description:
-      "A japanese learning app for those who love the japanese culture, especially anime! This is a Lisbom project, and I’m currently responsable for the character design, as well for the animation and overall illustrations that will come on the app. Stay tunned!",
+      "A beauty salon website focused on providing an elegant and user-friendly experience for clients looking to book appointments and explore services. Developed with a modern tech stack to ensure responsiveness and performance.",
     bannerImage: "/portfolio/salao-rosa-de-saron/banner.png",
     links: [
       {
