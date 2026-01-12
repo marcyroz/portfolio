@@ -85,7 +85,7 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
             </div>
           ))}
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap max-w-2xl justify-end">
           {item.technologies?.map((tech, index) => (
             <Image
               key={index}

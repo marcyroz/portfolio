@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 flex flex-col gap-5 max-w-7xl justify-center mx-auto snap-start"
+      className="py-20 px-40 flex flex-col gap-5 justify-center mx-auto snap-start"
     >
       <Title color="bg-secondary" title="Contact me" />
       <h3 className="text-secondary font-semibold text-2xl">
