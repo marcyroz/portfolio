@@ -31,13 +31,14 @@ export default function About() {
       <div className="flex flex-col gap-16 w-120">
         <Title title="About Me" color="bg-tertiary" />
         <p className="font-bold text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Sou uma Jovem de 21 anos recém formada em Análise e Desenvolvimento de
+          Sistemas, e adoro o mundo da tecnologia e da arte! Sempre fui uma
+          pessoa muito criativa, e encontrei na programação uma forma de unir
+          minhas duas paixões. Gosto de desenvolver softwares, sites,
+          aplicativos e jogos, e também de criar artes digitais, ilustrações e
+          animações. Acredito que a tecnologia pode ser uma ferramenta poderosa
+          para transformar o mundo, e quero contribuir para isso com meu
+          trabalho e minha criatividade.
         </p>
         <div className="flex items-center gap-5 w-full">
           <Separator className="flex-1" />
