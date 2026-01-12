@@ -1,4 +1,6 @@
 import CustomSeparator from "@/components/custom-separator";
+import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function Mogo() {
   return (
@@ -92,6 +94,45 @@ export default function Mogo() {
             </span>
           </li>
         </ul>
+      </div>
+      <CustomSeparator />
+      <Card className="p-20 bg-white flex-1 justify-center items-center">
+        <Image
+          src="/portfolio/mogo/logo.svg"
+          alt="Mogo Logo"
+          width={800}
+          height={400}
+          className="object-contain w-full h-auto"
+        />
+      </Card>
+      <div className="flex gap-8">
+        <Card className="p-20 bg-white flex-1 justify-center items-center">
+          <Image
+            src="/portfolio/mogo/dog.svg"
+            alt="Mogo Dog Illustration"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
+        </Card>
+        <Card className="p-20 bg-white flex-1">
+          <Image
+            src="/portfolio/mogo/dog-2.svg"
+            alt="Mogo Dog Illustration 2"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
+        </Card>
+        <Card className="p-20 bg-white flex-1">
+          <Image
+            src="/portfolio/mogo/dog-3.svg"
+            alt="Mogo Dog Illustration 3"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
+        </Card>
       </div>
     </div>
   );
