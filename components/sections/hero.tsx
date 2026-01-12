@@ -1,8 +1,13 @@
 import { Button } from "../ui/button";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
+import { useLocale } from "next-intl";
 
 export default function Hero() {
+  const locale = useLocale();
+  const cvPath =
+    locale === "pt-br" ? "/cv/marcelly-cv-pt-br.pdf" : "/cv/marcelly-cv-en.pdf";
+
   return (
     <section
       id="home"
@@ -21,9 +26,11 @@ export default function Hero() {
             Contact me
             <Mail />
           </Button>
-          <Button variant="outline" className="text-white">
-            My CV
-            <Download />
+          <Button variant="outline" className="text-white" asChild>
+            <a href={cvPath} download>
+              My CV
+              <Download />
+            </a>
           </Button>
         </div>
         <div className="absolute -bottom-20 -left-20">
@@ -39,7 +46,7 @@ export default function Hero() {
           className="-z-10"
         />
         <Image
-          src="/animations/eu.gif"
+          src="/animations/me.gif"
           alt="Hero Image"
           width={800}
           height={800}
