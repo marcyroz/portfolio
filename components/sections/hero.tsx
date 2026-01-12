@@ -23,7 +23,9 @@ export default function Hero() {
         </h3>
         <div className="flex gap-4">
           <Button variant="secondary">
-            Contact me
+            <a href="mailto:marcellyfarias.contato@gmail.com" target="_blank">
+              Contact me
+            </a>
             <Mail />
           </Button>
           <Button variant="outline" className="text-white" asChild>
