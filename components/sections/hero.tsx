@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="h-[calc(100vh-7rem)] flex items-center justify-center flex-col px-5 gap-10 lg:flex-row lg:justify-between lg:px-40 lg:gap-0"
+      className="min-h-[calc(100vh-7rem)] lg:h-[calc(100vh-7rem)] flex items-center justify-center flex-col px-5 gap-10 lg:flex-row lg:justify-between lg:px-40 lg:gap-0"
     >
       <div className="flex flex-col gap-2 relative">
         <h1 className="text-white text-5xl lg:text-7xl font-bold">
