@@ -7,6 +7,7 @@ import BehanceIcon from "../icons/behance-icon";
 import SalaoRosaDeSaron from "../portfolio/projects/salao-rosa-de-saron";
 import Desu from "../portfolio/projects/desu";
 import YR432 from "../portfolio/projects/yr432";
+import Mogo from "../portfolio/projects/mogo";
 
 const projectData = [
   {
@@ -120,7 +121,11 @@ const projectData = [
       {
         title: "Github",
         icon: <GithubIcon width={20} height={20} />,
-        url: "https://github.com/marcyroz/YR432-V2",
+        url: "https://github.com/marcyroz/mogo-mobile",
+      },
+      {
+        title: "Figma",
+        url: "https://www.figma.com/design/SR9AhPV6SZRLnTmllOVDxk/mogo?node-id=395-695&t=mYcTgyQzQ246XwPK-1",
       },
     ],
     technologies: [
@@ -161,7 +166,7 @@ const projectData = [
         icon: "skills/design/illustrator.svg",
       },
     ],
-    content: YR432,
+    content: Mogo,
   },
   {
     id: 3,
