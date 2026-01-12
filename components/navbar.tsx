@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Button } from "./ui/button";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const t = useTranslations("nav");
@@ -12,7 +14,7 @@ export default function Navbar() {
     { title: t("contact"), url: "#contact", color: "bg-secondary" },
   ];
   return (
-    <nav className="h-28 bg-popover w-full px-40 flex items-center justify-between sticky">
+    <nav className="h-28 bg-popover w-full lg:px-40 flex items-center justify-between sticky">
       <div className="items-center flex gap-4">
         <Image
           src="/star.svg"
@@ -21,11 +23,14 @@ export default function Navbar() {
           height={40}
           className="inline-block ml-2"
         />
-        <span className="text-4xl font-semibold text-primary">
+        <span className="text-3xl lg:text-4xl font-semibold text-primary">
           Marcelly Farias
         </span>
       </div>
-      <div>
+      <Button variant="ghost" className="lg:hidden">
+        <Menu />
+      </Button>
+      <div className="hidden lg:block">
         <ul className="flex gap-8 text-white text-xl font-semibold">
           {navigationLinks.map((link) => (
             <li

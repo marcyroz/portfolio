@@ -9,7 +9,7 @@ export default function SalaoRosaDeSaron() {
       <KeyAchievements projectKey="salaoRosaDeSaron" />
       <CustomSeparator />
       <div className="flex gap-10">
-        <Card className="p-20 bg-white flex-1 justify-center">
+        <Card className="p-5 lg:p-20 bg-white flex-1 justify-center">
           <Image
             src="/portfolio/salao-rosa-de-saron/logo-salao.svg"
             alt="Salão Rosa de Saron Logo"
@@ -18,7 +18,7 @@ export default function SalaoRosaDeSaron() {
             className="object-contain w-full h-auto"
           />
         </Card>
-        <Card className="p-20 bg-white flex-1 justify-center">
+        <Card className="p-5 lg:p-20 bg-white flex-1 justify-center">
           <Image
             src="/portfolio/salao-rosa-de-saron/logo-salao-2.svg"
             alt="Salão Rosa de Saron Alternative Logo"

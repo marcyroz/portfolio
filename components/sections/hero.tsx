@@ -12,10 +12,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="h-[calc(100vh-7rem)] flex px-40 items-center justify-between"
+      className="h-[calc(100vh-7rem)] flex items-center justify-center flex-col px-5 gap-10 lg:flex-row lg:justify-between lg:px-40 lg:gap-0"
     >
       <div className="flex flex-col gap-2 relative">
-        <h1 className="text-white text-7xl font-bold">{t("greeting")}</h1>
+        <h1 className="text-white text-5xl lg:text-7xl font-bold">
+          {t("greeting")}
+        </h1>
         <h2 className="text-primary font-bold text-3xl">{t("title")}</h2>
         <h3 className="font-semibold text-xl max-w-96">{t("subtitle")}</h3>
         <div className="flex gap-4">
@@ -32,11 +34,11 @@ export default function Hero() {
             </a>
           </Button>
         </div>
-        <div className="absolute -bottom-20 -left-20">
+        <div className="absolute -bottom-30 lg:-bottom-20 lg:-left-20">
           <Image src="/star-2.svg" alt="Hero Image" width={80} height={80} />
         </div>
       </div>
-      <div className="relative">
+      <div className="relative flex size-80 lg:size-auto">
         <Image
           src="/hero.svg"
           alt="Hero background image"

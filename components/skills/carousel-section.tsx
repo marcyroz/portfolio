@@ -41,7 +41,10 @@ export default function CarouselSection({
         >
           <CarouselContent>
             {carouselItems.map((item) => (
-              <CarouselItem key={item.id} className="basis-1/5">
+              <CarouselItem
+                key={item.id}
+                className="basis-1/2 lg:basis-1/5 pl-5"
+              >
                 <Card className="bg-popover items-center gap-2 justify-center p-10">
                   <Image
                     src={item.image}
@@ -49,7 +52,7 @@ export default function CarouselSection({
                     width={150}
                     height={150}
                   />
-                  <span className="text-white text-lg font-bold">
+                  <span className="hidden lg:block text-white text-lg font-bold">
                     {item.title}
                   </span>
                 </Card>
@@ -58,7 +61,7 @@ export default function CarouselSection({
           </CarouselContent>
         </Carousel>
       </div>
-      <div className="flex mt-12 items-center gap-2">
+      <div className="flex flex-col lg:flex-row lg:mt-12 items-center gap-5 lg:gap-2">
         {detailItems.map((detail) => (
           <DetailText key={detail.id} text={detail.text} icon={detail.icon} />
         ))}

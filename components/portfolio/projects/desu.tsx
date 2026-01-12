@@ -41,7 +41,7 @@ const autoplayPlugin = Autoplay({ delay: 3000, stopOnInteraction: false });
 
 export default function Desu() {
   return (
-    <div className="pt-5 flex flex-col gap-8">
+    <div className="pt-5 flex flex-col gap-8 w-full max-w-full overflow-hidden">
       <KeyAchievements projectKey="desu" />
       <CustomSeparator />
       <div className="flex relative w-full h-150 rounded-3xl">
@@ -52,8 +52,8 @@ export default function Desu() {
           className="object-cover rounded-3xl"
         />
       </div>
-      <div className="flex gap-8">
-        <Card className="p-20 bg-white flex-1 justify-center items-center">
+      <div className="flex flex-col lg:flex-row gap-8">
+        <Card className="p-5 lg:p-20 bg-white flex-1">
           <Image
             src="/portfolio/desu/characters-illustration.svg"
             alt="Desu Characters Illustration"
@@ -62,7 +62,7 @@ export default function Desu() {
             className="object-contain w-full h-auto"
           />
         </Card>
-        <Card className="p-20 bg-white flex-1">
+        <Card className="p-5 lg:p-20 bg-white flex-1">
           <Image
             src="/portfolio/desu/characters-illustration-2.svg"
             alt="Desu Characters Illustration 2"
@@ -72,8 +72,8 @@ export default function Desu() {
           />
         </Card>
       </div>
-      <div className="flex gap-8">
-        <Card className="p-20 bg-white flex-1">
+      <div className="flex flex-col lg:flex-row gap-8">
+        <Card className="p-5 lg:p-20 bg-white flex-1">
           <Image
             src="/portfolio/desu/characters-illustration-3.svg"
             alt="Desu Characters Illustration 3"
@@ -93,8 +93,8 @@ export default function Desu() {
           </div>
         </Card>
       </div>
-      <div className="flex gap-8">
-        <Card className="p-8 bg-white flex-1 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <Card className="p-5 lg:p-8 bg-white">
           <Image
             src="/portfolio/desu/okiji-2.svg"
             alt="character Okiji Illustration"
@@ -103,7 +103,7 @@ export default function Desu() {
             className="object-contain w-full h-auto"
           />
         </Card>
-        <Card className="p-4 bg-white flex-1 justify-center">
+        <Card className="p-5 lg:p-4 bg-white">
           <Image
             src="/portfolio/desu/sarunosuke-2.svg"
             alt="character Sarunosuke Illustration"
@@ -112,7 +112,7 @@ export default function Desu() {
             className="object-contain w-full h-auto"
           />
         </Card>
-        <Card className="p-4 bg-white flex-1 justify-center">
+        <Card className="p-5 lg:p-4 bg-white">
           <Image
             src="/portfolio/desu/inunosuke-2.svg"
             alt="character Inunosuke Illustration"
@@ -121,7 +121,7 @@ export default function Desu() {
             className="object-contain w-full h-auto"
           />
         </Card>
-        <Card className="p-4 bg-white flex-1 justify-center">
+        <Card className="p-5 lg:p-4 bg-white justify-center">
           <Image
             src="/portfolio/desu/daisuke-okiji.svg"
             alt="character Okiji Daisuke Illustration"

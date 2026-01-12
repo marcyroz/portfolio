@@ -36,8 +36,8 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="bg-card-foreground flex flex-col p-20 items-center">
-      <div className="flex gap-8">
+    <footer className="bg-card-foreground flex flex-col px-5 py-10 lg:p-20 lg:items-center">
+      <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex justify-between w-full">
           <div className="flex flex-col">
             <div className="flex items-center gap-4 mb-4">
@@ -56,7 +56,7 @@ export default function Footer() {
             <p className="font-bold text-lg max-w-2xl">{t("text2")}</p>
             <span className="font-bold text-lg">{t("signature")}</span>
           </div>
-          <div className="flex">
+          <div className="hidden lg:block lg:flex">
             <Image
               src="/animations/gatinho-3.gif"
               alt="Cat Animation"
@@ -67,13 +67,13 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="w-2 bg-white/20 self-stretch" />
+        <div className="w-2 bg-white/20 self-stretch hidden lg:block" />
         <div className="relative flex flex-col">
-          <div className="flex-col gap-4 flex px-10 mb-10">
+          <div className="flex-col gap-4 flex lg:px-10 lg:mb-10">
             <h4 className="font-semibold text-2xl text-white">
               {t("socialsTitle")}
             </h4>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex lg:max-w-90 flex-wrap gap-4">
               {socials.map((social) => (
                 <div
                   key={social.name}
@@ -83,8 +83,8 @@ export default function Footer() {
                   onClick={() => window.open(social.link, "_blank")}
                 >
                   {cloneElement(social.icon, {
-                    width: 80,
-                    height: 80,
+                    width: 60,
+                    height: 60,
                     color: hoveredIcon === social.name ? "#FFFFFF" : "#838383",
                   })}
                 </div>
@@ -99,8 +99,20 @@ export default function Footer() {
             className="self-end"
           />
         </div>
+        <div className="self-end mb-10 lg:hidden">
+          <Image
+            src="/animations/gatinho-3.gif"
+            alt="Cat Animation"
+            width={150}
+            height={150}
+            unoptimized
+            className="object-contain self-end"
+          />
+        </div>
       </div>
-      <span className="text-lg">© Copyright 2025 | Marcelly Farias</span>
+      <span className="text-lg self-center">
+        © Copyright 2025 | Marcelly Farias
+      </span>
     </footer>
   );
 }

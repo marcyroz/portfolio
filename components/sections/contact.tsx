@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-40 flex flex-col gap-5 justify-center mx-auto snap-start"
+      className="py-20 px-5 lg:px-40 flex flex-col gap-5 justify-center mx-auto snap-start"
     >
       <Title color="bg-secondary" title={t("title")} />
       <h3 className="text-secondary font-semibold text-2xl">{t("subtitle")}</h3>
@@ -35,29 +35,31 @@ export default function Contact() {
         <Label htmlFor="email">{t("emailLabel")}</Label>
         <Textarea placeholder={t("messagePlaceholder")} />
       </div>
-      <Button variant="secondary">
+      <Button variant="secondary" className="w-fit">
         {t("sendButton")}
         <SendHorizonal />
       </Button>
 
       <div className="flex justify-between items-end">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 lg:gap-8">
           <h3 className="text-secondary font-semibold text-2xl">
             {t("alternativeTitle")}
           </h3>
-          <Button variant="secondary">
+          <Button variant="secondary" className="w-fit">
             <a href="mailto:marcellyfarias.contato@gmail.com" target="_blank">
               {t("sendEmailButton")}
             </a>
             <SendHorizonal />
           </Button>
         </div>
-        <Image
-          src="/asset-2.svg"
-          alt="Contact Image"
-          width={100}
-          height={100}
-        />
+        <div className="size-20 lg:size-auto items-end flex">
+          <Image
+            src="/asset-2.svg"
+            alt="Contact Image"
+            width={100}
+            height={100}
+          />
+        </div>
       </div>
     </section>
   );

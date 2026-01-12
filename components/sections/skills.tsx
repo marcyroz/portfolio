@@ -280,9 +280,18 @@ export default function Skills() {
   const t = useTranslations("skills");
 
   return (
-    <section id="skills" className="bg-card-foreground p-28 snap-start">
-      <div className="flex flex-col items-center gap-20">
-        <Title title={t("title")} color="bg-secondary" />
+    <section
+      id="skills"
+      className="bg-card-foreground px-5 py-20 lg:p-28 snap-start"
+    >
+      <div className="flex flex-col items-center gap-10 lg:gap-20">
+        <div className="self-start">
+          <Title
+            title={t("title")}
+            color="bg-secondary"
+            className="w-60 lg:w-auto"
+          />
+        </div>
         {skillsSections.map((section) => (
           <CarouselSection
             key={section.id}
@@ -294,9 +303,11 @@ export default function Skills() {
             }))}
           />
         ))}
-        <div className="flex gap-10 items-center">
-          <div className="flex flex-col max-w-2xl gap-8">
-            <p className="font-bold text-lg text-end">{t("quote")}</p>
+        <div className="flex flex-col lg:flex-row gap-10 items-center">
+          <div className="flex flex-col-reverse lg:flex-col max-w-2xl gap-8">
+            <p className="font-bold text-lg text-center lg:text-end">
+              {t("quote")}
+            </p>
             <Separator />
           </div>
           <Image

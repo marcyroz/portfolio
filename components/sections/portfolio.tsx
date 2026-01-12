@@ -247,25 +247,25 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="px-40 pt-20 pb-10 items-center flex flex-col gap-10 snap-start"
+      className="px-5 lg:px-40 pt-14 lg:pt-20 pb-10 items-center flex flex-col gap-10 snap-start"
     >
-      <div className="flex relative items-center gap-8 w-fit">
+      <div className="flex relative items-center gap-3 lg:gap-8 w-fit">
         <Image
           src="/star-3.svg"
           alt="Sparkles Icon"
           width={60}
           height={60}
-          className="absolute -left-20 bottom-0"
+          className="absolute -left-17 lg:-left-20 bottom-0"
         />
-        <div className="w-32 h-2 bg-primary" />
+        <div className="w-10 lg:w-32 h-2 bg-primary" />
         <h2 className="text-4xl text-white font-bold">Portfolio</h2>
-        <div className="w-32 h-2 bg-primary" />
+        <div className="w-10 lg:w-32 h-2 bg-primary" />
         <Image
           src="/star-3.svg"
           alt="Sparkles Icon"
           width={60}
           height={60}
-          className="absolute -right-20 bottom-0"
+          className="absolute -right-17 lg:-right-20 bottom-0"
         />
       </div>
       <div className="flex flex-col gap-5">

@@ -48,7 +48,7 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
           className="object-cover rounded-3xl"
         />
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
         <div className="flex gap-5">
           {item.links.map((link, index) => (
             <div
@@ -88,7 +88,7 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
             </div>
           ))}
         </div>
-        <div className="flex gap-2 flex-wrap max-w-2xl justify-end">
+        <div className="flex gap-2 flex-wrap max-w-2xl lg:justify-end">
           {item.technologies?.map((tech, index) => (
             <Image
               key={index}

@@ -9,10 +9,10 @@ import Skills from "@/components/sections/skills";
 
 export default function Home() {
   return (
-    <main className="scroll-smooth snap-y h-screen overflow-y-scroll">
+    <main className="scroll-smooth snap-y h-screen overflow-y-scroll overflow-x-hidden">
       <Navbar />
       <Hero />
-      <CustomSeparator className="px-20" />
+      <CustomSeparator className="lg:px-20 px-5" />
       <About />
       <Skills />
       <Portfolio />
