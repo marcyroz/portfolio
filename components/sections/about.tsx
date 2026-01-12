@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex-col flex min-h-screen gap-40 items-center px-5 py-15 lg:px-40 lg:py-0 lg:flex-row justify-center snap-start"
+      className="flex-col flex min-h-screen gap-40 items-center px-5 py-15 my-5 lg:my-0 lg:px-40 lg:py-0 lg:flex-row justify-center snap-start"
     >
       <div className="relative hidden lg:block">
         <Image

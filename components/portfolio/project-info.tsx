@@ -118,12 +118,12 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
           <Separator
             className={cn(
               "transition-colors flex-1 h-0.5",
-              isButtonHovered ? "bg-white" : "bg-popover"
+              isButtonHovered ? "bg-white" : "bg-foreground"
             )}
           />
           <Button
             variant="ghost"
-            className="group text-popover shrink-0"
+            className="group text-foreground shrink-0"
             onClick={() => setIsExpanded(!isExpanded)}
             onMouseEnter={() => setIsButtonHovered(true)}
             onMouseLeave={() => setIsButtonHovered(false)}
@@ -139,7 +139,7 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
           <Separator
             className={cn(
               "transition-colors flex-1 h-0.5",
-              isButtonHovered ? "bg-white" : "bg-popover"
+              isButtonHovered ? "bg-white" : "bg-foreground"
             )}
           />
         </div>
