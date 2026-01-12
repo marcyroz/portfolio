@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="h-[calc(100vh-7rem)] flex px-40 items-center justify-between">
+    <section
+      id="home"
+      className="h-[calc(100vh-7rem)] flex px-40 items-center justify-between"
+    >
       <div className="flex flex-col gap-2 relative">
         <h1 className="text-white text-7xl font-bold">Hi! I am Marcelly.</h1>
         <h2 className="text-primary font-bold text-3xl">

@@ -25,7 +25,7 @@ export default function CarouselSection({
   carouselItems,
   detailItems,
 }: CarouselSectionProps) {
-  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
 
   return (
     <div className="flex flex-col gap-10 w-full items-center">

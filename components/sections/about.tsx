@@ -4,7 +4,10 @@ import Title from "../title";
 
 export default function About() {
   return (
-    <section className="flex h-screen gap-40 items-center px-40 justify-center">
+    <section
+      id="about"
+      className="flex h-screen gap-40 items-center px-40 justify-center snap-start"
+    >
       <div className="relative">
         <Image
           src="/me.png"
@@ -38,7 +41,7 @@ export default function About() {
           aplicativos e jogos, e também de criar artes digitais, ilustrações e
           animações. Acredito que a tecnologia pode ser uma ferramenta poderosa
           para transformar o mundo, e quero contribuir para isso com meu
-          trabalho e minha criatividade.
+          trabalho e olhar artístico.
         </p>
         <div className="flex items-center gap-5 w-full">
           <Separator className="flex-1" />

@@ -6,11 +6,10 @@ import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import Portfolio from "@/components/sections/portfolio";
 import Skills from "@/components/sections/skills";
-import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <main>
+    <main className="scroll-smooth snap-y h-screen overflow-y-scroll">
       <Navbar />
       <Hero />
       <CustomSeparator className="px-20" />

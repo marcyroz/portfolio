@@ -1,5 +1,3 @@
-"use client";
-
 import CustomSeparator from "@/components/custom-separator";
 import { Card } from "@/components/ui/card";
 import {
@@ -9,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
 
 const carouselItems = [
   {
@@ -39,9 +36,9 @@ const carouselItems = [
   },
 ];
 
-export default function Desu() {
-  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+const autoplayPlugin = Autoplay({ delay: 3000, stopOnInteraction: false });
 
+export default function Desu() {
   return (
     <div className="pt-5 flex flex-col gap-8">
       <div className="flex flex-col gap-4">
@@ -84,7 +81,7 @@ export default function Desu() {
           <li className="flex gap-3">
             <span className="text-primary font-bold">•</span>
             <span className="font-bold text-lg">
-              Worked with SVG rendering on native platform using{" "}
+              Worked with SVG rendering and styling on native platform using{" "}
               <strong className="text-white">Skia library</strong>,{" "}
               <strong className="text-white">React reusables</strong>, and{" "}
               <strong className="text-white">NativeWind</strong>
@@ -240,7 +237,7 @@ export default function Desu() {
       </div>
       <Carousel
         className="w-full"
-        plugins={[plugin.current]}
+        plugins={[autoplayPlugin]}
         opts={{
           align: "start",
           loop: true,

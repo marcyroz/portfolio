@@ -277,7 +277,7 @@ const skillsSections = [
 
 export default function Skills() {
   return (
-    <section className="bg-card-foreground p-28">
+    <section id="skills" className="bg-card-foreground p-28 snap-start">
       <div className="flex flex-col items-center gap-20">
         <Title title="Technologies and Skills" color="bg-secondary" />
         {skillsSections.map((section) => (

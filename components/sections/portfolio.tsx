@@ -154,7 +154,10 @@ const projectData = [
 
 export default function Portfolio() {
   return (
-    <section className="px-40 pt-40 pb-10 items-center flex flex-col gap-15">
+    <section
+      id="portfolio"
+      className="px-40 pt-20 pb-10 items-center flex flex-col gap-15 snap-start"
+    >
       <div className="flex relative items-center gap-8 w-fit">
         <Image
           src="/star-3.svg"

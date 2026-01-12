@@ -8,7 +8,10 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <section className="py-28 flex flex-col gap-8 max-w-7xl justify-center mx-auto">
+    <section
+      id="contact"
+      className="py-20 flex flex-col gap-5 max-w-7xl justify-center mx-auto snap-start"
+    >
       <Title color="bg-secondary" title="Contact me" />
       <h3 className="text-secondary font-semibold text-2xl">
         By filling this form...

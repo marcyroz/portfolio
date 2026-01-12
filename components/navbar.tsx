@@ -2,11 +2,10 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const navigationLinks = [
-  { title: "Home", url: "#", color: "bg-primary" },
-  { title: "About", url: "#", color: "bg-secondary" },
-  { title: "Skills", url: "#", color: "bg-tertiary" },
-  { title: "Portfolio", url: "#", color: "bg-primary" },
-  { title: "Contact", url: "#", color: "bg-secondary" },
+  { title: "About", url: "#about", color: "bg-secondary" },
+  { title: "Skills", url: "#skills", color: "bg-tertiary" },
+  { title: "Portfolio", url: "#portfolio", color: "bg-primary" },
+  { title: "Contact", url: "#contact", color: "bg-secondary" },
 ];
 
 export default function Navbar() {
@@ -31,7 +30,7 @@ export default function Navbar() {
               key={link.title}
               className="relative flex group cursor-pointer hover:scale-105"
             >
-              {link.title}
+              <a href={link.url}>{link.title}</a>
               <div
                 className={cn(
                   "group-hover:block hidden w-full h-4 absolute -z-10 -bottom-1 -left-2",
