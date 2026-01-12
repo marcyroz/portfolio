@@ -1,5 +1,131 @@
 {
   "common": {
-    "welcome": "Welcome"
+    "welcome": "Welcome",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "keyAchievements": "Key Achievements"
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi! I am Marcelly.",
+    "title": "Frontend Developer and Designer",
+    "subtitle": "I'm guided by creativity, skill and love for what I do!",
+    "contactButton": "Contact me",
+    "cvButton": "My CV"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "I'm a 21-year-old recently graduated in Systems Analysis and Development, and I love the world of technology and art! I've always been a very creative person, and I found in programming a way to unite my two passions. I like to develop software, websites, apps and games, and also create digital art, illustrations and animations. I believe that technology can be a powerful tool to transform the world, and I want to contribute to this with my work and artistic vision."
+  },
+  "skills": {
+    "title": "Technologies and Skills",
+    "quote": "If you know the concepts of design and art, and also know how to develop, you can use technology to truly do anything you wish.",
+    "frontendDevelopment": {
+      "title": "Frontend Development",
+      "detail1": "Development of responsive systems and websites",
+      "detail2": "API consumption and data manipulation",
+      "detail3": "Deploy, domain management and performance (SEO) with SSR"
+    },
+    "backendDevelopment": {
+      "title": "Backend Development",
+      "detail1": "Development of RESTful and GraphQL APIs",
+      "detail2": "SQL and NoSQL database management",
+      "detail3": "Integration with cloud services and containerization"
+    },
+    "designIllustrationAnimation": {
+      "title": "Design, Illustration and Animation",
+      "detail1": "Creation of logos and visual identities",
+      "detail2": "Character and background design",
+      "detail3": "Creation of both static and interactive animations"
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "subtitle": "By filling this form...",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your first name...",
+    "lastNameLabel": "Last Name",
+    "lastNamePlaceholder": "Your last name...",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Your email address...",
+    "messagePlaceholder": "Your message...",
+    "sendButton": "Send",
+    "alternativeTitle": "Or directly at my e-mail!",
+    "sendEmailButton": "Send me an e-mail"
+  },
+  "footer": {
+    "thanks": "Thanks for visiting!",
+    "text1": "If you're here, you probably took an interest in my work, so feel free to reach out professionally or just say hi on LinkedIn sometime, I'm pretty active there!",
+    "text2": "To stay updated on what I'm up to, follow me on my socials and drop by here sometime. See you later! ;)",
+    "signature": "- Marcy",
+    "socialsTitle": "Socials"
+  },
+  "projects": {
+    "desu": {
+      "title": "DESU",
+      "description": "An AI-powered Japanese learning app designed for anime and Japanese culture enthusiasts. This innovative language course generates personalized lessons and progress sections through artificial intelligence, creating a highly tailored learning experience for each user.",
+      "keyAchievements": [
+        "Developed complex screens and features in <bold>React Native with Expo</bold> and <bold>TypeScript</bold>",
+        "Built responsive and animated landing pages with <bold>Next.js</bold> and <bold>shadcn/ui</bold>",
+        "Implemented <bold>internationalization</bold> with <bold>i18n</bold>",
+        "Active participation in design process, creating illustrations, animations, and screens using <bold>Figma</bold>, <bold>Illustrator</bold>, and <bold>Photoshop</bold>",
+        "Worked with SVG rendering and styling on native platform using <bold>Skia library</bold>, <bold>React reusables</bold>, and <bold>NativeWind</bold>",
+        "Developed gamified backend features with <bold>tRPC</bold>, <bold>Nest.js</bold>, and <bold>Docker PostgreSQL/Neo4j/MongoDB</bold> container",
+        "Worked in a <bold>monorepo environment</bold> with <bold>Turborepo</bold>",
+        "Built AI-powered features, mainly chatbots using <bold>LangChain</bold> and <bold>Vercel AI SDK</bold>",
+        "Participated in <bold>Scrum rituals</bold> including dailies, reviews, and planning sessions",
+        "Developed features for <bold>browser extensions</bold>",
+        "Created automated tests using <bold>Jest</bold> and <bold>Vitest</bold>",
+        "Documented frontend components through <bold>Storybook</bold>"
+      ]
+    },
+    "mogo": {
+      "title": "mogo",
+      "description": "Mogo is a digital system designed to analyze and evaluate urban accessibility in the city of Praia Grande. Using Google Street View images and map data, the project identifies accessibility elements (such as ramps, tactile paving, and other essential structures) and assigns star ratings to routes, establishments, and tourist attractions.",
+      "keyAchievements": [
+        "Built a comprehensive <bold>urban accessibility analysis system</bold> for Praia Grande using <bold>Google Street View</bold> and <bold>Google Maps APIs</bold>",
+        "Developed mobile application with <bold>React Native</bold> and <bold>Expo</bold>, featuring native maps integration",
+        "Implemented AI-powered accessibility detection system using <bold>YOLOv8</bold> to identify ramps, tactile paving, and essential structures",
+        "Created star-rating classification system for routes, establishments, and tourist attractions",
+        "Built backend with <bold>Python</bold> and <bold>Django REST Framework</bold> for data processing and API management",
+        "Implemented modern state management using <bold>Zustand</bold> and <bold>TanStack Query</bold>",
+        "Designed complete user experience using <bold>Figma</bold> and <bold>Adobe Illustrator</bold>",
+        "Integrated real-time location services with <bold>Expo Location</bold> and <bold>Google Places Autocomplete</bold>",
+        "Styled with <bold>NativeWind</bold> (Tailwind CSS for React Native) for consistent design system",
+        "Focused on <bold>inclusive design principles</bold> to serve the accessibility community effectively"
+      ]
+    },
+    "yr432": {
+      "title": "YR432",
+      "description": "YR432 is a cellular simulation game set in a hospital environment. You take control of a precision biomedical operator, tasked with saving a patient infected with a \"common flu\". Manage medications, combat the infection, and make decisions that can lead to a cure... or the end.",
+      "keyAchievements": [
+        "Developed a <bold>real-time strategy game</bold> with cellular simulation in hospital environment using <bold>Unity</bold> and <bold>C#</bold>",
+        "Implemented <bold>A* pathfinding algorithm</bold> for intelligent cell movement and behavior",
+        "Created all <bold>game illustrations and animations</bold> from scratch using <bold>Adobe Photoshop</bold>",
+        "Designed <bold>sound effects and audio</bold> to enhance game immersion",
+        "Built complex <bold>medication management system</bold> with real-time decision-making mechanics",
+        "Developed <bold>narrative-driven gameplay</bold> with multiple endings based on player performance",
+        "Implemented <bold>dynamic dialogue system</bold> with custom expressions and character interactions",
+        "Created <bold>dynamic soundtrack</bold> that responds to game events and tension",
+        "Designed game architecture with <bold>ScriptableObjects</bold> for flexible data management",
+        "Implemented robust <bold>object-oriented design</bold> with clean architecture principles in C#",
+        "Developed as project for <bold>Software Engineering Lab</bold> at university"
+      ]
+    },
+    "salaoRosaDeSaron": {
+      "title": "Salão Rosa de Saron",
+      "description": "A beauty salon website focused on providing an elegant and user-friendly experience for clients looking to book appointments and explore services.",
+      "keyAchievements": [
+        "Built with <bold>Next.js App Router</bold> for optimal SEO and performance",
+        "Implemented interactive animations using <bold>Framer Motion</bold>, <bold>AOS</bold>, and <bold>Embla Carousel</bold>",
+        "Deployed on <bold>Vercel</bold> with custom domain from <bold>Hostinger</bold>",
+        "Collaborated with a designer to create a professional brand identity"
+      ]
+    }
   }
 }

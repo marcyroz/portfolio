@@ -6,6 +6,7 @@ import DiscordIcon from "../icons/discord-icon";
 import LinkedinIcon from "../icons/linkedin-icon";
 import GithubIcon from "../icons/github-icon";
 import BehanceIcon from "../icons/behance-icon";
+import { useTranslations } from "next-intl";
 
 const socials = [
   {
@@ -32,6 +33,7 @@ const socials = [
 
 export default function Footer() {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
+  const t = useTranslations("footer");
 
   return (
     <footer className="bg-card-foreground flex flex-col p-20 items-center">
@@ -47,20 +49,12 @@ export default function Footer() {
                 className="inline-block ml-2"
               />
               <h4 className="font-semibold text-2xl text-white">
-                Thanks for visiting!
+                {t("thanks")}
               </h4>
             </div>
-            <p className="font-bold text-lg max-w-2xl">
-              If you're here, you probably took an interest in my work, so feel
-              free to reach out professionally or just say hi on LinkedIn
-              sometime.
-            </p>
-            <p className="font-bold text-lg max-w-2xl">
-              I'm pretty active there! To stay updated on what I'm up to, follow
-              me on my socials and feel free to drop by here again soon. See you
-              later! ;)
-            </p>
-            <span className="font-bold text-lg">- Marcy</span>
+            <p className="font-bold text-lg max-w-2xl">{t("text1")}</p>
+            <p className="font-bold text-lg max-w-2xl">{t("text2")}</p>
+            <span className="font-bold text-lg">{t("signature")}</span>
           </div>
           <div className="flex">
             <Image
@@ -68,6 +62,7 @@ export default function Footer() {
               alt="Cat Animation"
               width={150}
               height={150}
+              unoptimized
               className="object-contain self-end"
             />
           </div>
@@ -75,7 +70,9 @@ export default function Footer() {
         <div className="w-2 bg-white/20 self-stretch" />
         <div className="relative flex flex-col">
           <div className="flex-col gap-4 flex px-10 mb-10">
-            <h4 className="font-semibold text-2xl text-white">Socials</h4>
+            <h4 className="font-semibold text-2xl text-white">
+              {t("socialsTitle")}
+            </h4>
             <div className="grid grid-cols-2 gap-4">
               {socials.map((social) => (
                 <div

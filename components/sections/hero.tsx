@@ -1,10 +1,11 @@
 import { Button } from "../ui/button";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Hero() {
   const locale = useLocale();
+  const t = useTranslations("hero");
   const cvPath =
     locale === "pt-br" ? "/cv/marcelly-cv-pt-br.pdf" : "/cv/marcelly-cv-en.pdf";
 
@@ -14,23 +15,19 @@ export default function Hero() {
       className="h-[calc(100vh-7rem)] flex px-40 items-center justify-between"
     >
       <div className="flex flex-col gap-2 relative">
-        <h1 className="text-white text-7xl font-bold">Hi! I am Marcelly.</h1>
-        <h2 className="text-primary font-bold text-3xl">
-          Frontend Developer and Designer
-        </h2>
-        <h3 className="font-semibold text-xl max-w-96">
-          I’m guided by creativity, skill and love for what I do!
-        </h3>
+        <h1 className="text-white text-7xl font-bold">{t("greeting")}</h1>
+        <h2 className="text-primary font-bold text-3xl">{t("title")}</h2>
+        <h3 className="font-semibold text-xl max-w-96">{t("subtitle")}</h3>
         <div className="flex gap-4">
           <Button variant="secondary">
             <a href="mailto:marcellyfarias.contato@gmail.com" target="_blank">
-              Contact me
+              {t("contactButton")}
             </a>
             <Mail />
           </Button>
           <Button variant="outline" className="text-white" asChild>
             <a href={cvPath} download>
-              My CV
+              {t("cvButton")}
               <Download />
             </a>
           </Button>

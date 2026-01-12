@@ -5,47 +5,50 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("contact");
+
   return (
     <section
       id="contact"
       className="py-20 px-40 flex flex-col gap-5 justify-center mx-auto snap-start"
     >
-      <Title color="bg-secondary" title="Contact me" />
-      <h3 className="text-secondary font-semibold text-2xl">
-        By filling this form...
-      </h3>
+      <Title color="bg-secondary" title={t("title")} />
+      <h3 className="text-secondary font-semibold text-2xl">{t("subtitle")}</h3>
       <div className="flex gap-4 w-full">
         <div className="gap-4 flex flex-col w-full">
-          <Label htmlFor="name">Name</Label>
-          <Input placeholder="Your first name..." />
+          <Label htmlFor="name">{t("nameLabel")}</Label>
+          <Input placeholder={t("namePlaceholder")} />
         </div>
         <div className="gap-4 flex flex-col w-full">
-          <Label htmlFor="lastName">Last Name</Label>
-          <Input placeholder="Your last name..." />
+          <Label htmlFor="lastName">{t("lastNameLabel")}</Label>
+          <Input placeholder={t("lastNamePlaceholder")} />
         </div>
       </div>
       <div className="gap-4 flex flex-col">
-        <Label htmlFor="email">E-mail</Label>
-        <Input placeholder="Your email address..." />
+        <Label htmlFor="email">{t("emailLabel")}</Label>
+        <Input placeholder={t("emailPlaceholder")} />
       </div>
       <div className="gap-4 flex flex-col">
-        <Label htmlFor="email">E-mail</Label>
-        <Textarea placeholder="Your message..." />
+        <Label htmlFor="email">{t("emailLabel")}</Label>
+        <Textarea placeholder={t("messagePlaceholder")} />
       </div>
       <Button variant="secondary">
-        Send
+        {t("sendButton")}
         <SendHorizonal />
       </Button>
 
       <div className="flex justify-between items-end">
         <div className="flex flex-col gap-8">
           <h3 className="text-secondary font-semibold text-2xl">
-            Or directly at my e-mail!
+            {t("alternativeTitle")}
           </h3>
           <Button variant="secondary">
-            Send me an e-mail
+            <a href="mailto:marcellyfarias.contato@gmail.com" target="_blank">
+              {t("sendEmailButton")}
+            </a>
             <SendHorizonal />
           </Button>
         </div>

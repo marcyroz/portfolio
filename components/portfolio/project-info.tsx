@@ -7,6 +7,7 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface ProjectInfoProps {
   item: {
@@ -29,6 +30,8 @@ interface ProjectInfoProps {
 }
 
 export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
+  const t = useTranslations("common");
+
   const [hoveredLink, setHoveredLink] = useState<number | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isButtonHovered, setIsButtonHovered] = useState(false);
@@ -125,7 +128,7 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
             onMouseEnter={() => setIsButtonHovered(true)}
             onMouseLeave={() => setIsButtonHovered(false)}
           >
-            {isExpanded ? "Show Less" : "Show More"}
+            {isExpanded ? t("showLess") : t("showMore")}
             <ChevronDown
               className={cn(
                 "size-6 transition-transform duration-500",

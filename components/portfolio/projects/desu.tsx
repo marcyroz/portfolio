@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import KeyAchievements from "../key-achievements";
 
 const carouselItems = [
   {
@@ -41,112 +42,7 @@ const autoplayPlugin = Autoplay({ delay: 3000, stopOnInteraction: false });
 export default function Desu() {
   return (
     <div className="pt-5 flex flex-col gap-8">
-      <div className="flex flex-col gap-4">
-        <h4 className="text-2xl font-bold text-primary">Key Achievements</h4>
-        <ul className="text-lg space-y-2">
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Developed complex screens and features in{" "}
-              <strong className="text-white">React Native with Expo</strong> and{" "}
-              <strong className="text-white">TypeScript</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Built responsive and animated landing pages with{" "}
-              <strong className="text-white">Next.js</strong> and{" "}
-              <strong className="text-white">shadcn/ui</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Implemented{" "}
-              <strong className="text-white">internationalization</strong> with{" "}
-              <strong className="text-white">i18n</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Active participation in design process, creating illustrations,
-              animations, and screens using{" "}
-              <strong className="text-white">Figma</strong>,{" "}
-              <strong className="text-white">Illustrator</strong>, and{" "}
-              <strong className="text-white">Photoshop</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Worked with SVG rendering and styling on native platform using{" "}
-              <strong className="text-white">Skia library</strong>,{" "}
-              <strong className="text-white">React reusables</strong>, and{" "}
-              <strong className="text-white">NativeWind</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Developed gamified backend features with{" "}
-              <strong className="text-white">tRPC</strong>,{" "}
-              <strong className="text-white">Nest.js</strong>, and{" "}
-              <strong className="text-white">
-                Docker PostgreSQL/Neo4j/MongoDB
-              </strong>{" "}
-              container
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Worked in a{" "}
-              <strong className="text-white">monorepo environment</strong> with{" "}
-              <strong className="text-white">Turborepo</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Built AI-powered features, mainly chatbots using{" "}
-              <strong className="text-white">LangChain</strong> and{" "}
-              <strong className="text-white">Vercel AI SDK</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Participated in{" "}
-              <strong className="text-white">Scrum rituals</strong> including
-              dailies, reviews, and planning sessions
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Developed features for{" "}
-              <strong className="text-white">browser extensions</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Created automated tests using{" "}
-              <strong className="text-white">Jest</strong> and{" "}
-              <strong className="text-white">Vitest</strong>
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-primary font-bold">•</span>
-            <span className="font-bold text-lg">
-              Documented frontend components through{" "}
-              <strong className="text-white">Storybook</strong>
-            </span>
-          </li>
-        </ul>
-      </div>
+      <KeyAchievements projectKey="desu" />
       <CustomSeparator />
       <div className="flex relative w-full h-150 rounded-3xl">
         <Image

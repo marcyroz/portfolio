@@ -1,14 +1,16 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-
-const navigationLinks = [
-  { title: "About", url: "#about", color: "bg-secondary" },
-  { title: "Skills", url: "#skills", color: "bg-tertiary" },
-  { title: "Portfolio", url: "#portfolio", color: "bg-primary" },
-  { title: "Contact", url: "#contact", color: "bg-secondary" },
-];
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+
+  const navigationLinks = [
+    { title: t("about"), url: "#about", color: "bg-secondary" },
+    { title: t("skills"), url: "#skills", color: "bg-tertiary" },
+    { title: t("portfolio"), url: "#portfolio", color: "bg-primary" },
+    { title: t("contact"), url: "#contact", color: "bg-secondary" },
+  ];
   return (
     <nav className="h-28 bg-popover w-full px-40 flex items-center justify-between sticky">
       <div className="items-center flex gap-4">

@@ -12,11 +12,12 @@ import {
 import CarouselSection from "../skills/carousel-section";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const skillsSections = [
   {
     id: 1,
-    title: "Frontend Development",
+    titleKey: "frontendDevelopment",
     carouselItems: [
       {
         id: 1,
@@ -122,24 +123,24 @@ const skillsSections = [
     detailItems: [
       {
         id: 1,
-        text: "Desenvolvimento de sistemas e sites responsivos",
+        textKey: "detail1",
         icon: <Smartphone size={50} />,
       },
       {
         id: 2,
-        text: "Consumo de APIs e manipulação de dados",
+        textKey: "detail2",
         icon: <Database size={50} />,
       },
       {
         id: 3,
-        text: "Deploy, gerenciamento de domínios e performance (SEO) com SSR",
+        textKey: "detail3",
         icon: <Chromium size={50} />,
       },
     ],
   },
   {
     id: 2,
-    title: "Backend Development",
+    titleKey: "backendDevelopment",
     carouselItems: [
       {
         id: 1,
@@ -210,24 +211,24 @@ const skillsSections = [
     detailItems: [
       {
         id: 1,
-        text: "Desenvolvimento de APIs RESTful e GraphQL",
+        textKey: "detail1",
         icon: <Server size={50} />,
       },
       {
         id: 2,
-        text: "Gerenciamento de bancos de dados SQL e NoSQL",
+        textKey: "detail2",
         icon: <Database size={50} />,
       },
       {
         id: 3,
-        text: "Integração com serviços cloud e containerização",
+        textKey: "detail3",
         icon: <Cloud size={50} />,
       },
     ],
   },
   {
     id: 3,
-    title: "Design, Illustration and Animation",
+    titleKey: "designIllustrationAnimation",
     carouselItems: [
       {
         id: 1,
@@ -258,17 +259,17 @@ const skillsSections = [
     detailItems: [
       {
         id: 1,
-        text: "Criação de logos e identidades visuais",
+        textKey: "detail1",
         icon: <Wallpaper size={50} />,
       },
       {
         id: 2,
-        text: "Design de personagens e backgrounds",
+        textKey: "detail2",
         icon: <Ghost size={50} />,
       },
       {
         id: 3,
-        text: "Criação de animações tanto estáticas quanto interativas",
+        textKey: "detail3",
         icon: <Brush size={50} />,
       },
     ],
@@ -276,25 +277,26 @@ const skillsSections = [
 ];
 
 export default function Skills() {
+  const t = useTranslations("skills");
+
   return (
     <section id="skills" className="bg-card-foreground p-28 snap-start">
       <div className="flex flex-col items-center gap-20">
-        <Title title="Technologies and Skills" color="bg-secondary" />
+        <Title title={t("title")} color="bg-secondary" />
         {skillsSections.map((section) => (
           <CarouselSection
             key={section.id}
-            title={section.title}
+            title={t(`${section.titleKey}.title`)}
             carouselItems={section.carouselItems}
-            detailItems={section.detailItems}
+            detailItems={section.detailItems.map((item) => ({
+              ...item,
+              text: t(`${section.titleKey}.${item.textKey}`),
+            }))}
           />
         ))}
         <div className="flex gap-10 items-center">
           <div className="flex flex-col max-w-2xl gap-8">
-            <p className="font-bold text-lg text-end">
-              {
-                '"If you know the concepts of design and art, and also know how to develop, you can use technology to trully do anything you wish."'
-              }
-            </p>
+            <p className="font-bold text-lg text-end">{t("quote")}</p>
             <Separator />
           </div>
           <Image
@@ -302,6 +304,7 @@ export default function Skills() {
             alt="Cat Animation"
             width={200}
             height={200}
+            unoptimized
           />
         </div>
       </div>
