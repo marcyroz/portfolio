@@ -13,7 +13,7 @@ export default function About() {
     >
       <div className="relative hidden lg:block">
         <Image
-          src="/me.png"
+          src="/me.jpg"
           alt="Foto Marcelly Farias"
           width={400}
           height={400}
