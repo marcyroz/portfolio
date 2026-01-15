@@ -62,7 +62,7 @@ export default function Contact() {
       <h3 className="text-secondary font-semibold text-2xl">{t("subtitle")}</h3>
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
-        <div className="flex gap-4 w-full">
+        <div className="flex flex-col lg:flex-row gap-4 w-full">
           <div className="gap-4 flex flex-col w-full">
             <Label htmlFor="name">{t("nameLabel")}</Label>
             <Input
