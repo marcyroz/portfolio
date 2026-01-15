@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyAoNpIHv_mShqtC6cw_yHPnqqs2Lod2yPY",
+  authDomain: "portfolio-45e4d.firebaseapp.com",
+  databaseURL: "https://portfolio-45e4d-default-rtdb.firebaseio.com/",
+  projectId: "portfolio-45e4d",
+  storageBucket: "portfolio-45e4d.firebasestorage.app",
+  messagingSenderId: "575711164900",
+  appId: "1:575711164900:web:d7c10bb1405e9989f22ff1",
+  measurementId: "G-YXC7MQNGN5",
 };
 
 const app = initializeApp(firebaseConfig);
