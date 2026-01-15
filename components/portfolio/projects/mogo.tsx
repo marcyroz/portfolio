@@ -14,7 +14,7 @@ export default function Mogo() {
           alt="Mogo Logo"
           width={800}
           height={400}
-          className="object-contain w-full h-auto"
+          className="object-contain w-full h-auto max-h-screen"
         />
       </Card>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

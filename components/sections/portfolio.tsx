@@ -9,6 +9,9 @@ import Desu from "../portfolio/projects/desu";
 import YR432 from "../portfolio/projects/yr432";
 import { useTranslations } from "next-intl";
 import Mogo from "../portfolio/projects/mogo";
+import { title } from "process";
+import DiogoCorrea from "../portfolio/projects/diogo-correa";
+import FigmaIcon from "../icons/figma-icon";
 
 export default function Portfolio() {
   const t = useTranslations("projects");
@@ -20,6 +23,10 @@ export default function Portfolio() {
       description: t("desu.description"),
       bannerImage: "/portfolio/desu/banner.svg",
       links: [
+        {
+          title: "Website",
+          url: "https://www.desuapp.com.br/",
+        },
         {
           title: "Behance",
           icon: <BehanceIcon width={20} height={20} />,
@@ -127,6 +134,7 @@ export default function Portfolio() {
         },
         {
           title: "Figma",
+          icon: <FigmaIcon width={20} height={20} />,
           url: "https://www.figma.com/design/SR9AhPV6SZRLnTmllOVDxk/mogo?node-id=395-695&t=mYcTgyQzQ246XwPK-1",
         },
       ],
@@ -217,6 +225,11 @@ export default function Portfolio() {
           icon: <GithubIcon width={20} height={20} />,
           url: "https://github.com/marcyroz/salao-rosa-de-saron",
         },
+        {
+          title: "Figma",
+          icon: <FigmaIcon width={20} height={20} />,
+          url: "https://www.figma.com/design/nkm3DdPEekwXm0bHqQMa4w/sal%C3%A3o?node-id=0-1&t=35ORy73KjzpyVjeE-1",
+        },
       ],
       technologies: [
         {
@@ -241,6 +254,34 @@ export default function Portfolio() {
         },
       ],
       content: SalaoRosaDeSaron,
+    },
+    {
+      id: 5,
+      title: t("diogoCorrea.title"),
+      description: t("diogoCorrea.description"),
+      bannerImage: "/portfolio/diogo-correa/banner.png",
+      links: [
+        {
+          title: "Website",
+          url: "https://landing-page-diogo-correa-dias.vercel.app/",
+        },
+        {
+          title: "Figma",
+          icon: <FigmaIcon width={20} height={20} />,
+          url: "https://www.figma.com/design/988GP3tXVQgepBJnaSP62z/Projeto-do-Diogo?node-id=5-89&t=raSPJrOBDAutwGQE-1",
+        },
+      ],
+      technologies: [
+        {
+          name: "Figma",
+          icon: "skills/design/figma.svg",
+        },
+        {
+          name: "Photoshop",
+          icon: "skills/design/photoshop.svg",
+        },
+      ],
+      content: DiogoCorrea,
     },
   ];
 

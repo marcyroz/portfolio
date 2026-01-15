@@ -126,6 +126,18 @@
         "Implantado na <bold>Vercel</bold> com domínio personalizado da <bold>Hostinger</bold>",
         "Colaborei com um designer para criar uma identidade de marca profissional"
       ]
+    },
+    "diogoCorrea": {
+      "title": "Diogo Correa",
+      "description": "Site pessoal do Diogo Correa, escritor focado em escrever livros de ficção e suspense. O site apresenta seu portfólio (livros publicados) e informações de contato.",
+      "keyAchievements": [
+        "Criei uma <bold>nova identidade visual do zero</bold> para a marca pessoal do escritor",
+        "Projetei todos os <bold>ativos visuais do zero</bold> usando <bold>Figma</bold> e <bold>Adobe Photoshop</bold>",
+        "Desenvolvi <bold>diferentes versões da landing page</bold> otimizadas para dispositivos <bold>desktop e mobile</bold>",
+        "Colaborei com um desenvolvedor para <bold>trazer o design à vida</bold>",
+        "<bold>Documentei os ativos customizados</bold> do projeto para handoff de design e referência futura",
+        "Garanti experiência de <bold>design responsivo</bold> consistente em todos os tamanhos de tela"
+      ]
     }
   }
 }

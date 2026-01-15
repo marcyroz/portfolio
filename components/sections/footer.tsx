@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
       </div>
       <span className="text-lg self-center">
-        © Copyright 2025 | Marcelly Farias
+        © Copyright 2026 | Marcelly Farias
       </span>
     </footer>
   );

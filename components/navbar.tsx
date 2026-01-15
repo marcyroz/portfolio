@@ -14,7 +14,7 @@ export default function Navbar() {
     { title: t("contact"), url: "#contact", color: "bg-secondary" },
   ];
   return (
-    <nav className="h-28 bg-popover w-full lg:px-40 flex items-center justify-between sticky">
+    <nav className="h-28 px-5 bg-popover w-full lg:px-40 flex items-center justify-between">
       <div className="items-center flex gap-4">
         <Image
           src="/star.svg"
@@ -28,7 +28,7 @@ export default function Navbar() {
         </span>
       </div>
       <Button variant="ghost" className="lg:hidden">
-        <Menu />
+        <Menu className="size-8" />
       </Button>
       <div className="hidden lg:block">
         <ul className="flex gap-8 text-white text-xl font-semibold">

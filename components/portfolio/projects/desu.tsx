@@ -44,7 +44,7 @@ export default function Desu() {
     <div className="pt-5 flex flex-col gap-8 w-full max-w-full overflow-hidden">
       <KeyAchievements projectKey="desu" />
       <CustomSeparator />
-      <div className="flex relative w-full h-150 rounded-3xl">
+      <div className="flex relative w-full h-140 rounded-3xl">
         <Image
           src="/portfolio/desu/desu-map.svg"
           alt="Desu sections map"
@@ -72,8 +72,39 @@ export default function Desu() {
           />
         </Card>
       </div>
+
       <div className="flex flex-col lg:flex-row gap-8">
+        <Card className="p-5 lg:p-10 bg-white flex-1 justify-center">
+          <Image
+            src="/portfolio/desu/hatsune-miku.svg"
+            alt="Hatsune Miku Inunosuke Illustration"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
+        </Card>
         <Card className="p-5 lg:p-20 bg-white flex-1">
+          <Image
+            src="/portfolio/desu/daisuke-janken.svg"
+            alt="character Daisuke Janken Illustration"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
+        </Card>
+        <Card className="p-5 lg:p-20 bg-white flex-1 justify-center">
+          <Image
+            src="/portfolio/desu/kurapika.svg"
+            alt="character Kurapika Inunosuke Illustration"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
+        </Card>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-8">
+        <Card className="p-5 lg:p-20 bg-white flex-1 justify-center">
           <Image
             src="/portfolio/desu/characters-illustration-3.svg"
             alt="Desu Characters Illustration 3"
@@ -82,18 +113,18 @@ export default function Desu() {
             className="object-contain w-full h-auto"
           />
         </Card>
-        <Card className="p-0 bg-white flex-1 overflow-hidden">
-          <div className="relative w-full h-full min-h-96">
-            <Image
-              src="/portfolio/desu/characters-illustration-4.svg"
-              alt="Desu Characters Illustration 4"
-              fill
-              className="object-cover rounded-3xl"
-            />
-          </div>
+        <Card className="p-5 lg:p-20 bg-white flex-1">
+          <Image
+            src="/portfolio/desu/okiji-sarunosuke.svg"
+            alt="characters Okiji and Sarunosuke Illustration"
+            width={800}
+            height={400}
+            className="object-contain w-full h-auto"
+          />
         </Card>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div className="flex flex-col lg:flex-row gap-8">
         <Card className="p-5 lg:p-8 bg-white">
           <Image
             src="/portfolio/desu/okiji-2.svg"
@@ -142,12 +173,13 @@ export default function Desu() {
         <CarouselContent>
           {carouselItems.map((item) => (
             <CarouselItem key={item.id} className="basis-1/1">
-              <div className="items-center flex justify-center p-10">
+              <div className="items-center flex justify-center md:p-12">
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={700}
                   height={700}
+                  className="w-full h-auto md:w-auto md:h-screen md:max-h-[80vh]"
                 />
               </div>
             </CarouselItem>

@@ -32,7 +32,7 @@ export default function About() {
           width={150}
           height={150}
           unoptimized
-          className="absolute -top-18 left-10 -rotate-25"
+          className="absolute -top-19 left-10 -rotate-25"
         />
       </div>
       <div className="flex flex-col gap-8 lg:gap-16 lg:w-120">
@@ -59,7 +59,7 @@ export default function About() {
             width={150}
             height={150}
             unoptimized
-            className="absolute -top-18 left-10 -rotate-25"
+            className="absolute -top-21 left-10 -rotate-18"
           />
         </div>
         <div className="flex items-center gap-5 w-full">

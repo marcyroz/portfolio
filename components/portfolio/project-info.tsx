@@ -38,7 +38,7 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
 
   return (
     <div className="flex flex-col gap-5 w-full">
-      <h3 className="text-primary font-semibold text-4xl">{item.title}</h3>
+      <h3 className="text-primary font-bold text-4xl">{item.title}</h3>
       <p className="font-bold text-lg">{item.description}</p>
       <div className="flex relative w-full h-104 rounded-3xl">
         <Image

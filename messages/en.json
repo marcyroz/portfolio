@@ -126,6 +126,18 @@
         "Deployed on <bold>Vercel</bold> with custom domain from <bold>Hostinger</bold>",
         "Collaborated with a designer to create a professional brand identity"
       ]
+    },
+    "diogoCorrea": {
+      "title": "Diogo Correa",
+      "description": "Personal website of Diogo Correa, a writer focused on fiction and suspense books. The site showcases his portfolio (published books) and contact information.",
+      "keyAchievements": [
+        "Created a <bold>new visual identity from scratch</bold> for the writer's personal brand",
+        "Designed all <bold>visual assets from zero</bold> using <bold>Figma</bold> and <bold>Adobe Photoshop</bold>",
+        "Developed <bold>different versions of the landing page</bold> optimized for <bold>desktop and mobile</bold> devices",
+        "Collaborated with a developer to <bold>bring the design to life</bold>",
+        "<bold>Documented custom assets</bold> from the project for design handoff and future reference",
+        "Ensured consistent <bold>responsive design</bold> experience across all screen sizes"
+      ]
     }
   }
 }
