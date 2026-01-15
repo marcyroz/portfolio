@@ -53,10 +53,13 @@
     "lastNamePlaceholder": "Seu sobrenome...",
     "emailLabel": "E-mail",
     "emailPlaceholder": "Seu endereço de e-mail...",
+    "messageLabel": "Mensagem",
     "messagePlaceholder": "Sua mensagem...",
     "sendButton": "Enviar",
+    "sending": "Enviando...",
     "alternativeTitle": "Ou diretamente no meu e-mail!",
-    "sendEmailButton": "Me envie um e-mail"
+    "sendEmailButton": "Me envie um e-mail",
+    "successMessage": "Mensagem enviada com sucesso! Olharei assim que possível :)"
   },
   "footer": {
     "thanks": "Obrigada pela visita!",

@@ -53,10 +53,13 @@
     "lastNamePlaceholder": "Your last name...",
     "emailLabel": "E-mail",
     "emailPlaceholder": "Your email address...",
+    "messageLabel": "Message",
     "messagePlaceholder": "Your message...",
     "sendButton": "Send",
+    "sending": "Sending...",
     "alternativeTitle": "Or directly at my e-mail!",
-    "sendEmailButton": "Send me an e-mail"
+    "sendEmailButton": "Send me an e-mail",
+    "successMessage": "Message sent successfully! I'll check it as soon as possible :)"
   },
   "footer": {
     "thanks": "Thanks for visiting!",

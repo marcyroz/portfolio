@@ -1,3 +1,5 @@
+"use client";
+
 import { SendHorizonal } from "lucide-react";
 import Title from "../title";
 import { Button } from "../ui/button";
@@ -6,9 +8,50 @@ import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useContactForm } from "@/firebase/hooks";
+import { useEffect } from "react";
+
+const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  email: z.email("Invalid email address"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactFormInputs = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   const t = useTranslations("contact");
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormInputs>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const { submitContactForm, loading, error, success, resetForm } =
+    useContactForm();
+
+  const onSubmit = async (data: ContactFormInputs) => {
+    const submitted = await submitContactForm(data);
+    if (submitted) {
+      reset();
+    }
+  };
+
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => {
+        resetForm();
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [success, resetForm]);
 
   return (
     <section
@@ -17,28 +60,82 @@ export default function Contact() {
     >
       <Title color="bg-secondary" title={t("title")} />
       <h3 className="text-secondary font-semibold text-2xl">{t("subtitle")}</h3>
-      <div className="flex gap-4 w-full">
-        <div className="gap-4 flex flex-col w-full">
-          <Label htmlFor="name">{t("nameLabel")}</Label>
-          <Input placeholder={t("namePlaceholder")} />
+
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
+        <div className="flex gap-4 w-full">
+          <div className="gap-4 flex flex-col w-full">
+            <Label htmlFor="name">{t("nameLabel")}</Label>
+            <Input
+              id="name"
+              placeholder={t("namePlaceholder")}
+              {...register("name")}
+              aria-invalid={errors.name ? "true" : "false"}
+            />
+            {errors.name && (
+              <p className="text-destructive text-sm">{errors.name.message}</p>
+            )}
+          </div>
+          <div className="gap-4 flex flex-col w-full">
+            <Label htmlFor="lastName">{t("lastNameLabel")}</Label>
+            <Input
+              id="lastName"
+              placeholder={t("lastNamePlaceholder")}
+              {...register("lastName")}
+              aria-invalid={errors.lastName ? "true" : "false"}
+            />
+            {errors.lastName && (
+              <p className="text-destructive text-sm">
+                {errors.lastName.message}
+              </p>
+            )}
+          </div>
         </div>
-        <div className="gap-4 flex flex-col w-full">
-          <Label htmlFor="lastName">{t("lastNameLabel")}</Label>
-          <Input placeholder={t("lastNamePlaceholder")} />
+        <div className="gap-4 flex flex-col">
+          <Label htmlFor="email">{t("emailLabel")}</Label>
+          <Input
+            id="email"
+            type="email"
+            placeholder={t("emailPlaceholder")}
+            {...register("email")}
+            aria-invalid={errors.email ? "true" : "false"}
+          />
+          {errors.email && (
+            <p className="text-destructive text-sm">{errors.email.message}</p>
+          )}
         </div>
-      </div>
-      <div className="gap-4 flex flex-col">
-        <Label htmlFor="email">{t("emailLabel")}</Label>
-        <Input placeholder={t("emailPlaceholder")} />
-      </div>
-      <div className="gap-4 flex flex-col">
-        <Label htmlFor="email">{t("emailLabel")}</Label>
-        <Textarea placeholder={t("messagePlaceholder")} />
-      </div>
-      <Button variant="secondary" className="w-fit">
-        {t("sendButton")}
-        <SendHorizonal />
-      </Button>
+        <div className="gap-4 flex flex-col">
+          <Label htmlFor="message">{t("messageLabel")}</Label>
+          <Textarea
+            id="message"
+            placeholder={t("messagePlaceholder")}
+            {...register("message")}
+            aria-invalid={errors.message ? "true" : "false"}
+          />
+          {errors.message && (
+            <p className="text-destructive text-sm">{errors.message.message}</p>
+          )}
+        </div>
+
+        {error && (
+          <p className="text-destructive text-lg font-semibold">{error}</p>
+        )}
+
+        {success && (
+          <p className="text-secondary text-lg font-semibold">
+            {t("successMessage")}
+          </p>
+        )}
+
+        <Button
+          type="submit"
+          variant="secondary"
+          className="w-fit"
+          disabled={loading}
+        >
+          {loading ? t("sending") : t("sendButton")}
+          <SendHorizonal />
+        </Button>
+      </form>
 
       <div className="flex justify-between items-end">
         <div className="flex flex-col gap-4 lg:gap-8">
