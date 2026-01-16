@@ -127,7 +127,12 @@
         "Built with <bold>Next.js App Router</bold> for optimal SEO and performance",
         "Implemented interactive animations using <bold>Framer Motion</bold>, <bold>AOS</bold>, and <bold>Embla Carousel</bold>",
         "Deployed on <bold>Vercel</bold> with custom domain from <bold>Hostinger</bold>",
-        "Collaborated with a designer to create a professional brand identity"
+        "Collaborated with a designer to create a professional brand identity",
+        "Implemented <bold>semantic HTML</bold> for better accessibility and search engine indexing",
+        "Configured <bold>SEO management</bold> with <bold>robots.txt</bold>, <bold>sitemaps</bold>, and proper <bold>metadata</bold>",
+        "Added <bold>web manifest</bold> for progressive web app capabilities",
+        "Optimized <bold>social media sharing</bold> with custom metadata for different platforms (Open Graph, Twitter Cards)",
+        "Implemented <bold>priority image rendering</bold> and lazy loading for optimal performance"
       ]
     },
     "diogoCorrea": {
