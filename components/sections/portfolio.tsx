@@ -9,7 +9,6 @@ import Desu from "../portfolio/projects/desu";
 import YR432 from "../portfolio/projects/yr432";
 import { useTranslations } from "next-intl";
 import Mogo from "../portfolio/projects/mogo";
-import { title } from "process";
 import DiogoCorrea from "../portfolio/projects/diogo-correa";
 import FigmaIcon from "../icons/figma-icon";
 

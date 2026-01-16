@@ -1,4 +1,3 @@
-import CustomSeparator from "@/components/custom-separator";
 import KeyAchievements from "../key-achievements";
 
 export default function YR432() {
