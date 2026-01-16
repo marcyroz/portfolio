@@ -40,7 +40,7 @@ export default function About() {
         <p className="font-bold text-lg">{t("text")}</p>
         <div className="relative lg:hidden size-85 self-center mt-20">
           <Image
-            src="/me.png"
+            src="/me.jpg"
             alt="Foto Marcelly Farias"
             width={400}
             height={400}
