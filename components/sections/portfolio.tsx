@@ -127,9 +127,14 @@ export default function Portfolio() {
       bannerImage: "/portfolio/mogo/banner.svg",
       links: [
         {
-          title: "Github",
+          title: "Github (Frontend)",
           icon: <GithubIcon width={20} height={20} />,
           url: "https://github.com/marcyroz/mogo-mobile",
+        },
+        {
+          title: "Github (Backend)",
+          icon: <GithubIcon width={20} height={20} />,
+          url: "https://github.com/marcyroz/mogo-api",
         },
         {
           title: "Figma",
