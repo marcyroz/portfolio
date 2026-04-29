@@ -2,6 +2,7 @@
 
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import LanguageButton from "./language-button";
 
 interface DrawerMenuProps {
   isOpen: boolean;
@@ -11,12 +12,16 @@ interface DrawerMenuProps {
     url: string;
     color: string;
   }[];
+  currentLanguage?: string | string[] | null;
+  handleLanguageToggle: () => void;
 }
 
 export default function DrawerMenu({
   isOpen,
   onClose,
   navigationLinks,
+  currentLanguage,
+  handleLanguageToggle,
 }: DrawerMenuProps) {
   return (
     <div className="lg:hidden">
@@ -48,11 +53,17 @@ export default function DrawerMenu({
               <div
                 className={cn(
                   "w-full h-4 absolute -z-10 -bottom-1 -right-2",
-                  link.color
+                  link.color,
                 )}
               />
             </a>
           ))}
+          <div className="pt-10">
+            <LanguageButton
+              currentLanguage={currentLanguage}
+              handleLanguageToggle={handleLanguageToggle}
+            />
+          </div>
         </nav>
       </aside>
     </div>
