@@ -7,9 +7,15 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import DrawerMenu from "./drawer-menu";
+import { Toggle } from "./ui/toggle";
+import { useParams, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const t = useTranslations("nav");
+  const router = useRouter();
+  const { locale } = useParams();
+
+  const [currentLanguage, setCurrentLanguage] = useState(locale);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const navigationLinks = [
@@ -18,6 +24,16 @@ export default function Navbar() {
     { title: t("portfolio"), url: "#portfolio", color: "bg-primary" },
     { title: t("contact"), url: "#contact", color: "bg-secondary" },
   ];
+
+  const handleLanguageToggle = () => {
+    if (currentLanguage === "en") {
+      setCurrentLanguage("pt");
+      router.replace("/pt-br");
+    } else {
+      setCurrentLanguage("en");
+      router.replace("/en");
+    }
+  };
 
   return (
     <>
@@ -52,11 +68,38 @@ export default function Navbar() {
                 <div
                   className={cn(
                     "group-hover:block hidden w-full h-4 absolute -z-10 -bottom-1 -left-2",
-                    link.color
+                    link.color,
                   )}
                 />
               </li>
             ))}
+            <li className="relative flex">
+              <Toggle
+                className="p-0 h-auto hover:bg-transparent cursor-pointer data-[state=on]:bg-transparent"
+                onClick={handleLanguageToggle}
+              >
+                <Image
+                  className={cn(
+                    "transition-opacity absolute",
+                    currentLanguage === "pt-br" ? "opacity-100" : "opacity-0",
+                  )}
+                  src="/languages/en.png"
+                  alt="English"
+                  width={24}
+                  height={24}
+                />
+                <Image
+                  className={cn(
+                    "transition-opacity absolute",
+                    currentLanguage === "en" ? "opacity-100" : "opacity-0",
+                  )}
+                  src="/languages/pt-br.png"
+                  alt="Portuguese"
+                  width={24}
+                  height={24}
+                />
+              </Toggle>
+            </li>
           </ul>
         </div>
       </nav>
