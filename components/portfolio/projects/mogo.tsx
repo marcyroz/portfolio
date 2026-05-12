@@ -8,6 +8,7 @@ export default function Mogo() {
     <div className="pt-5 flex flex-col gap-8">
       <KeyAchievements projectKey="mogo" />
       <CustomSeparator />
+      <h5 className="text-2xl font-bold text-primary">Galeria</h5>
       <Card className="p-5 lg:p-20 bg-white flex-1 justify-center items-center">
         <Image
           src="/portfolio/mogo/logo.svg"

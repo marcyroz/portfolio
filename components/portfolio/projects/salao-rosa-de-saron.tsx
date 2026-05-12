@@ -8,6 +8,7 @@ export default function SalaoRosaDeSaron() {
     <div className="pt-5 flex flex-col gap-8">
       <KeyAchievements projectKey="salaoRosaDeSaron" />
       <CustomSeparator />
+      <h5 className="text-2xl font-bold text-primary">Galeria</h5>
       <div className="flex flex-col lg:flex-row gap-10">
         <Card className="p-5 lg:p-20 bg-white flex-1 justify-center">
           <Image

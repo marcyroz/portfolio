@@ -1,13 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
-import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import CollapsibleButton from "../collapsible-button";
 
 interface ProjectInfoProps {
   item: {
@@ -114,35 +111,13 @@ export default function ProjectInfo({ item, renderContent }: ProjectInfoProps) {
         )}
       </AnimatePresence>
       {renderContent && (
-        <div className="w-full flex justify-center items-center gap-4">
-          <Separator
-            className={cn(
-              "transition-colors flex-1 h-0.5",
-              isButtonHovered ? "bg-white" : "bg-foreground"
-            )}
-          />
-          <Button
-            variant="ghost"
-            className="group text-foreground shrink-0"
-            onClick={() => setIsExpanded(!isExpanded)}
-            onMouseEnter={() => setIsButtonHovered(true)}
-            onMouseLeave={() => setIsButtonHovered(false)}
-          >
-            {isExpanded ? t("showLess") : t("showMore")}
-            <ChevronDown
-              className={cn(
-                "size-6 transition-transform duration-500",
-                isExpanded && "rotate-180"
-              )}
-            />
-          </Button>
-          <Separator
-            className={cn(
-              "transition-colors flex-1 h-0.5",
-              isButtonHovered ? "bg-white" : "bg-foreground"
-            )}
-          />
-        </div>
+        <CollapsibleButton
+          isExpanded={isExpanded}
+          setIsExpanded={setIsExpanded}
+          isButtonHovered={isButtonHovered}
+          setIsButtonHovered={setIsButtonHovered}
+          t={t}
+        />
       )}
     </div>
   );

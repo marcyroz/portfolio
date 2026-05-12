@@ -59,7 +59,13 @@
     "sending": "Sending...",
     "alternativeTitle": "Or directly at my e-mail!",
     "sendEmailButton": "Send me an e-mail",
-    "successMessage": "Message sent successfully! I'll check it as soon as possible :)"
+    "successMessage": "Message sent successfully! I'll check it as soon as possible :)",
+    "formWarnings": {
+      "nameRequired": "Name is required",
+      "lastNameMinLength": "Last name must be at least 2 characters",
+      "emailInvalid": "Invalid email address",
+      "messageRequired": "Message is required"
+    }
   },
   "footer": {
     "thanks": "Thanks for visiting!",

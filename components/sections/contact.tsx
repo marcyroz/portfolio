@@ -14,17 +14,26 @@ import { z } from "zod";
 import { useContactForm } from "@/firebase/hooks";
 import { useEffect } from "react";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  lastName: z.string().min(2, "Last name must be at least 2 characters"),
-  email: z.email("Invalid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
-
-type ContactFormInputs = z.infer<typeof contactSchema>;
-
 export default function Contact() {
   const t = useTranslations("contact");
+
+  const contactSchema = z.object({
+    name: z.string().min(2, t("formWarnings.nameRequired")),
+    lastName: z
+      .string()
+      .min(2, t("formWarnings.lastNameMinLength"))
+      .optional()
+      .or(z.literal("")),
+    email: z
+      .string()
+      .email(t("formWarnings.emailInvalid"))
+      .optional()
+      .or(z.literal("")),
+    message: z.string().min(10, t("formWarnings.messageRequired")),
+  });
+
+  type ContactFormInputs = z.infer<typeof contactSchema>;
+
   const {
     register,
     handleSubmit,

@@ -44,6 +44,7 @@ export default function Desu() {
     <div className="pt-5 flex flex-col gap-8 w-full max-w-full overflow-hidden">
       <KeyAchievements projectKey="desu" />
       <CustomSeparator />
+      <h5 className="text-2xl font-bold text-primary">Galeria</h5>
       <div className="flex relative w-full h-140 rounded-3xl">
         <Image
           src="/portfolio/desu/desu-map.svg"

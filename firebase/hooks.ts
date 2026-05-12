@@ -4,8 +4,8 @@ import { database } from "./register";
 
 export interface ContactFormData {
   name: string;
-  lastName: string;
-  email: string;
+  lastName?: string;
+  email?: string;
   message: string;
   timestamp: number;
 }
@@ -16,7 +16,7 @@ export function useContactForm() {
   const [success, setSuccess] = useState(false);
 
   const submitContactForm = async (
-    data: Omit<ContactFormData, "timestamp">
+    data: Omit<ContactFormData, "timestamp">,
   ) => {
     setLoading(true);
     setError(null);

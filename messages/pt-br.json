@@ -59,7 +59,13 @@
     "sending": "Enviando...",
     "alternativeTitle": "Ou diretamente no meu e-mail!",
     "sendEmailButton": "Me envie um e-mail",
-    "successMessage": "Mensagem enviada com sucesso! Olharei assim que possível :)"
+    "successMessage": "Mensagem enviada com sucesso! Olharei assim que possível :)",
+    "formWarnings": {
+      "nameRequired": "Nome é obrigatório",
+      "lastNameMinLength": "O sobrenome deve ter pelo menos 2 caracteres",
+      "emailInvalid": "Endereço de e-mail inválido",
+      "messageRequired": "Mensagem é obrigatória"
+    }
   },
   "footer": {
     "thanks": "Obrigada pela visita!",
